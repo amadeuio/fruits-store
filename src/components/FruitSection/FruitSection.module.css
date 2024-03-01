@@ -1,0 +1,26 @@
+@import "../../css/global.css";
+
+.fruitItem {
+  height: 180px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.fruitTitle {
+  font-size: var(--font-size);
+}
+
+.fruitImg {
+  height: 80px;
+  width: auto;
+}
+
+.fruitGrid {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+}

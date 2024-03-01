@@ -1,5 +1,5 @@
 {
-  "name": "shopping-cart",
+  "name": "fruits-store",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/uuid": "^9.0.8",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",

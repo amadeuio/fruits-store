@@ -1,0 +1,23 @@
+@import "../../css/global.css";
+
+.sidebar {
+  color: black;
+  width: 250px;
+  height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.menuItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #555;
+}
