@@ -1,5 +1,6 @@
 .navbar {
   padding: 20px;
+  padding-left: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -8,7 +9,7 @@
 .logo {
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 }
 
 .navList {

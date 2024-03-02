@@ -1,23 +1,107 @@
 @import "../../css/global.css";
 
 .sidebar {
-  color: black;
-  width: 250px;
-  height: 100%;
-  overflow-y: auto; /* Enable vertical scrolling if needed */
+  padding: 30px;
+  padding-left: 40px;
+  width: 260px;
 }
 
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
+.title {
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
-.menuItem {
-  padding: 10px;
+.colorsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.colorItem {
+  font-weight: 400;
+  font-size: 14px;
+  padding: 20px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.menuItem:hover {
-  background-color: #555;
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.colorItem.clicked {
+  animation: clickEffect 0.5s ease;
+}
+
+.text {
+  color: var(--color-800);
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.colorItem:hover .text {
+  color: var(--color-500);
+}
+
+.colorItem:hover {
+  background-color: var(--color-100);
+}
+
+.checkbox {
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkIcon {
+  width: 22px;
+  height: 22px;
+  fill: white;
+}
+
+.purple {
+  background-color: rgb(214, 117, 214);
+}
+
+.green {
+  background-color: rgb(85, 182, 85);
+}
+
+.brown {
+  background-color: rgb(110, 52, 52);
+}
+
+.red {
+  background-color: rgb(255, 70, 70);
+}
+
+.orange {
+  background-color: rgb(255, 108, 16);
+}
+
+.yellow {
+  background-color: rgb(255, 230, 0);
+}
+
+.blue {
+  background-color: rgb(81, 81, 255);
+}
+
+.black {
+  background-color: rgb(54, 54, 54);
 }
