@@ -17,7 +17,7 @@ const Sidebar = () => {
 
   return (
     <div className={styles.sidebar}>
-      <div className={styles.title}>Color ({checkedCount})</div>
+      <div className={styles.title}>Color {checkedCount ? `(${checkedCount})` : ""}</div>
       <div className={styles.colorsGrid}>
         {colors.map((colorObj, index) => (
           <div

@@ -1,16 +1,11 @@
-import styles from "./App.module.css";
 import Navbar from "./components/Navbar/Navbar";
-import FruitSection from "./components/FruitSection/FruitSection";
-import Sidebar from "./components/Sidebar/Sidebar";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <div className={styles.contentContainer}>
-        <Sidebar />
-        <FruitSection />
-      </div>
+      <Outlet />
     </>
   );
 };

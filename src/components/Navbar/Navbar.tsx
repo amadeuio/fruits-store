@@ -3,6 +3,7 @@ import SearchIcon from "../../icons/SearchIcon";
 import BagIcon from "../../icons/BagIcon";
 import { useState } from "react";
 import FavoriteIcon from "../../icons/FavoriteIcon";
+import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   const [query, setQuery] = useState("");
@@ -30,19 +31,10 @@ const Navbar = () => {
       <h1 className={styles.logo}>fruits.</h1>
       <ul className={styles.navList}>
         <li className={styles.navItem}>
-          <a href="#" className={styles.navLink}>
-            Store
-          </a>
+          <Link to="/">Home</Link>
         </li>
         <li className={styles.navItem}>
-          <a href="#" className={styles.navLink}>
-            About
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="#" className={styles.navLink}>
-            Contact
-          </a>
+          <Link to="store">Store</Link>
         </li>
       </ul>
       <div className={styles.rightContainer}>
