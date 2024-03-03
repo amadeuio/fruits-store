@@ -1,0 +1,64 @@
+@import "../../../css/global.css";
+
+.title {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.list {
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.list.expanded {
+  height: 526px;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.listItem:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.listItem:hover {
+  background-color: var(--color-100);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: solid 1px var(--color-300);
+  border-radius: 4px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.checkbox.checked {
+  background-color: black;
+  border-color: black;
+  animation: clickEffect 0.5s ease;
+}
+
+.checkIcon {
+  fill: white;
+}
+
+.itemName {
+  font-weight: 400;
+  font-size: 14px;
+}

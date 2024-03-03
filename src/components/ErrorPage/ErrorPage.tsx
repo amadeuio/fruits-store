@@ -6,9 +6,9 @@ const ErrorPage = () => {
     <div className={styles.errorPage}>
       <h1>Oooops 😬</h1>
       <div className={styles.errorBody}>
-        <h2>404 - Page Not Found</h2>
+        <h2>404 - Page Not Found 😵</h2>
         <Link to="/" className={styles.homeLink}>
-          You can go back to the home by clicking here!
+          You can go back home 🍎 by clicking here!
         </Link>
       </div>
     </div>

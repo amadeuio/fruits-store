@@ -10,6 +10,6 @@ export interface Fruit {
 }
 
 export interface colorObject {
-  color: Color;
+  name: Color;
   isChecked: boolean;
 }

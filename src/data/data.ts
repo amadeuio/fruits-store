@@ -155,12 +155,40 @@ export const fruits: Fruit[] = [
 ];
 
 export const colorList: colorObject[] = [
-  { color: "purple", isChecked: true },
-  { color: "green", isChecked: false },
-  { color: "brown", isChecked: false },
-  { color: "red", isChecked: false },
-  { color: "orange", isChecked: false },
-  { color: "yellow", isChecked: false },
-  { color: "blue", isChecked: false },
-  { color: "black", isChecked: false },
+  { name: "purple", isChecked: true },
+  { name: "green", isChecked: false },
+  { name: "brown", isChecked: false },
+  { name: "red", isChecked: false },
+  { name: "orange", isChecked: false },
+  { name: "yellow", isChecked: false },
+  { name: "blue", isChecked: false },
+  { name: "black", isChecked: false },
+];
+
+export const familyList = [
+  { name: "rosaceae", isChecked: true },
+  { name: "citrus", isChecked: false },
+  { name: "nightshade", isChecked: false },
+  { name: "gourd", isChecked: false },
+  { name: "banana", isChecked: false },
+  { name: "palm", isChecked: false },
+  { name: "grape", isChecked: false },
+  { name: "cashew", isChecked: false },
+  { name: "berry", isChecked: false },
+  { name: "olive", isChecked: false },
+  { name: "kiwi", isChecked: false },
+  { name: "laurel", isChecked: false },
+];
+
+export const vitaminList = [
+  { name: "Vitamin C", isChecked: false },
+  { name: "Vitamin A", isChecked: false },
+  { name: "Vitamin K", isChecked: false },
+  { name: "Vitamin E", isChecked: false },
+  { name: "Vitamin B6", isChecked: false },
+  { name: "Vitamin B9", isChecked: false },
+  { name: "Vitamin B2", isChecked: false },
+  { name: "Vitamin B3", isChecked: false },
+  { name: "Vitamin B1", isChecked: false },
+  { name: "Vitamin B5", isChecked: false },
 ];
