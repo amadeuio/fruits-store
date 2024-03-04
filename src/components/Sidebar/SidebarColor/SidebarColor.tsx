@@ -1,7 +1,6 @@
 import styles from "./SidebarColor.module.css";
 import { useState } from "react";
 import { initialColors } from "../../../data/categories";
-import prettyName from "../../../utils/prettyName";
 import CheckIcon from "../../../icons/CheckIcon";
 import ExpandIcon from "../../../icons/ExpandIcon";
 
@@ -37,7 +36,7 @@ const SidebarColor = () => {
             <div className={`${styles.checkbox} ${styles[color.name]}`}>
               {color.isChecked && <CheckIcon className={styles.checkIcon} />}
             </div>
-            <span className={styles.itemName}>{prettyName(color.name)}</span>
+            <span className={styles.itemName}>{color.name}</span>
           </div>
         ))}
       </div>

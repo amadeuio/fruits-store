@@ -1,20 +1,20 @@
 export type UUID = string;
 
-export type Color = "purple" | "green" | "brown" | "red" | "orange" | "yellow" | "blue" | "black";
+export type Color = "Purple" | "Green" | "Brown" | "Red" | "Orange" | "Yellow" | "Blue" | "Black";
 
 export type Family =
-  | "rose"
-  | "citrus"
-  | "nightshade"
-  | "gourd"
-  | "palm"
-  | "cashew"
-  | "berry"
-  | "laurel"
-  | "other";
+  | "Rose"
+  | "Citrus"
+  | "Nightshade"
+  | "Gourd"
+  | "Palm"
+  | "Cashew"
+  | "Berry"
+  | "Laurel"
+  | "Other";
 
 export type Vitamin =
-  | "vitamin-c"
+  | "Vitamin C"
   | "Vitamin A"
   | "Vitamin K"
   | "Vitamin E"
@@ -43,7 +43,7 @@ export interface VitaminObject {
 export interface Fruit {
   id: UUID;
   name: string;
-  unicode: string;
+  imageName: string;
   price: number;
   colors: Color[];
   family: Family;

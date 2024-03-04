@@ -2,7 +2,6 @@ import styles from "./SidebarFamily.module.css";
 import ExpandIcon from "../../../icons/ExpandIcon";
 import { initialFamilies } from "../../../data/categories";
 import { useState } from "react";
-import prettyName from "../../../utils/prettyName";
 import CheckIcon from "../../../icons/CheckIcon";
 
 const SidebarFamily = () => {
@@ -36,7 +35,7 @@ const SidebarFamily = () => {
             <span className={`${styles.checkbox} ${family.isChecked ? styles.checked : ""}`}>
               {family.isChecked && <CheckIcon className={styles.checkIcon} />}
             </span>
-            <span className={styles.itemName}>{prettyName(family.name)}</span>
+            <span className={styles.itemName}>{family.name}</span>
           </div>
         ))}
       </div>

@@ -1,9 +1,9 @@
 import styles from "./FruitItem.module.css";
 import { Fruit } from "../../../data/types";
-import prettyName from "../../../utils/prettyName";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
 import { useFruitsContext } from "../../../Context";
 import BagIcon from "../../../icons/BagIcon";
+import getImageSrc from "../../../utils/getImageSrc";
 
 interface FruitItemProps {
   fruit: Fruit;
@@ -35,9 +35,6 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
     setFruits(updatedFruits);
   };
 
-  const baseUrl = "https://em-content.zobj.net/source/apple/354/";
-  const imageUrl = `${baseUrl}${fruit.name}_${fruit.unicode}.png`;
-
   return (
     <div className={styles.fruitItem}>
       <FavoriteIcon
@@ -45,10 +42,10 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
         isFilled={favorite}
         onClick={handleFavoriteClick}
       />
-      <img className={styles.image} src={imageUrl} alt={prettyName(name)} />
+      <img className={styles.image} src={getImageSrc(name)} alt={name} />
       <div className={styles.info}>
-        <h2 className={styles.title}>{prettyName(name)}</h2>
-        <div className={styles.family}>{prettyName(family)} Family</div>
+        <h2 className={styles.name}>{name}</h2>
+        <div className={styles.family}>{family} Family</div>
         <div className={styles.price}>${price}</div>
       </div>
       <BagIcon className={styles.bag} isFilled={inBag} onClick={handleBagClick} />

@@ -2,7 +2,6 @@ import styles from "./SidebarVitamins.module.css";
 import ExpandIcon from "../../../icons/ExpandIcon";
 import { initialVitamins } from "../../../data/categories";
 import { useState } from "react";
-import prettyName from "../../../utils/prettyName";
 import CheckIcon from "../../../icons/CheckIcon";
 
 const SidebarVitamins = () => {
@@ -36,7 +35,7 @@ const SidebarVitamins = () => {
             <span className={`${styles.checkbox} ${vitamin.isChecked ? styles.checked : ""}`}>
               {vitamin.isChecked && <CheckIcon className={styles.checkIcon} />}
             </span>
-            <span className={styles.itemName}>{prettyName(vitamin.name)}</span>
+            <span className={styles.itemName}>{vitamin.name}</span>
           </div>
         ))}
       </div>
