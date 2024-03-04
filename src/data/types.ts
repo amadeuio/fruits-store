@@ -43,12 +43,11 @@ export interface VitaminObject {
 export interface Fruit {
   id: UUID;
   name: string;
-  imageName: string;
   price: number;
   colors: Color[];
   family: Family;
   vitamins: Vitamin[];
-  favorite: boolean;
+  isFavorite: boolean;
   inBag: boolean;
 }
 

@@ -11,12 +11,12 @@ interface FruitItemProps {
 
 const FruitItem = ({ fruit }: FruitItemProps) => {
   const { fruits, setFruits } = useFruitsContext();
-  const { id, name, family, favorite, price, inBag } = fruit;
+  const { id, name, price, family, isFavorite, inBag } = fruit;
 
   const handleFavoriteClick = () => {
     const updatedFruits = fruits.map((f) => {
       if (f.id === id) {
-        return { ...f, favorite: !f.favorite };
+        return { ...f, isFavorite: !f.isFavorite };
       }
       return f;
     });
@@ -38,8 +38,8 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
   return (
     <div className={styles.fruitItem}>
       <FavoriteIcon
-        className={`${styles.favorite} ${favorite ? styles.clicked : ""}`}
-        isFilled={favorite}
+        className={`${styles.favorite} ${isFavorite ? styles.clicked : ""}`}
+        isFilled={isFavorite}
         onClick={handleFavoriteClick}
       />
       <img className={styles.image} src={getImageSrc(name)} alt={name} />
