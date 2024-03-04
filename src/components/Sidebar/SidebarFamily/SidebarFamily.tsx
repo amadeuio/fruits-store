@@ -1,12 +1,12 @@
 import styles from "./SidebarFamily.module.css";
 import ExpandIcon from "../../../icons/ExpandIcon";
-import { familyList } from "../../../data/data";
+import { initialFamilies } from "../../../data/categories";
 import { useState } from "react";
 import prettyName from "../../../utils/prettyName";
 import CheckIcon from "../../../icons/CheckIcon";
 
 const SidebarFamily = () => {
-  const [families, setFamilies] = useState(familyList);
+  const [families, setFamilies] = useState(initialFamilies);
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleNavbar = () => {
@@ -27,10 +27,13 @@ const SidebarFamily = () => {
         Family {checkedCount ? `(${checkedCount})` : ""}
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
       </div>
-      <div className={`${styles.list} ${isExpanded && styles.expanded}`}>
+      <div className={`${styles.list} ${isExpanded ? styles.expanded : ""}`}>
         {families.map((family, index) => (
-          <div className={styles.listItem} onClick={() => handleCheckboxClick(index)}>
-            <span className={`${styles.checkbox} ${family.isChecked && styles.checked}`}>
+          <div
+            key={family.name}
+            className={styles.listItem}
+            onClick={() => handleCheckboxClick(index)}>
+            <span className={`${styles.checkbox} ${family.isChecked ? styles.checked : ""}`}>
               {family.isChecked && <CheckIcon className={styles.checkIcon} />}
             </span>
             <span className={styles.itemName}>{prettyName(family.name)}</span>

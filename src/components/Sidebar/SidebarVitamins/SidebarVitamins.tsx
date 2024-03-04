@@ -1,12 +1,12 @@
 import styles from "./SidebarVitamins.module.css";
 import ExpandIcon from "../../../icons/ExpandIcon";
-import { vitaminList } from "../../../data/data";
+import { initialVitamins } from "../../../data/categories";
 import { useState } from "react";
 import prettyName from "../../../utils/prettyName";
 import CheckIcon from "../../../icons/CheckIcon";
 
 const SidebarVitamins = () => {
-  const [vitamins, setVitamins] = useState(vitaminList);
+  const [vitamins, setVitamins] = useState(initialVitamins);
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleNavbar = () => {
@@ -27,13 +27,16 @@ const SidebarVitamins = () => {
         Vitamins {checkedCount ? `(${checkedCount})` : ""}
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
       </div>
-      <div className={`${styles.list} ${isExpanded && styles.expanded}`}>
-        {vitamins.map((Vitamins, index) => (
-          <div className={styles.listItem} onClick={() => handleCheckboxClick(index)}>
-            <span className={`${styles.checkbox} ${Vitamins.isChecked && styles.checked}`}>
-              {Vitamins.isChecked && <CheckIcon className={styles.checkIcon} />}
+      <div className={`${styles.list} ${isExpanded ? styles.expanded : ""}`}>
+        {vitamins.map((vitamin, index) => (
+          <div
+            key={vitamin.name}
+            className={styles.listItem}
+            onClick={() => handleCheckboxClick(index)}>
+            <span className={`${styles.checkbox} ${vitamin.isChecked ? styles.checked : ""}`}>
+              {vitamin.isChecked && <CheckIcon className={styles.checkIcon} />}
             </span>
-            <span className={styles.itemName}>{prettyName(Vitamins.name)}</span>
+            <span className={styles.itemName}>{prettyName(vitamin.name)}</span>
           </div>
         ))}
       </div>

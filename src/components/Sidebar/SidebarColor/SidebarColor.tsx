@@ -1,12 +1,12 @@
 import styles from "./SidebarColor.module.css";
 import { useState } from "react";
-import { colorList } from "../../../data/data";
+import { initialColors } from "../../../data/categories";
 import prettyName from "../../../utils/prettyName";
 import CheckIcon from "../../../icons/CheckIcon";
 import ExpandIcon from "../../../icons/ExpandIcon";
 
 const SidebarColor = () => {
-  const [colors, setColors] = useState(colorList);
+  const [colors, setColors] = useState(initialColors);
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleNavbar = () => {
@@ -19,7 +19,7 @@ const SidebarColor = () => {
     setColors(updatedColors);
   };
 
-  const checkedCount = colors.filter((colorObj) => colorObj.isChecked).length;
+  const checkedCount = colors.filter((color) => color.isChecked).length;
 
   return (
     <div className={styles.sidebarColor}>
@@ -28,16 +28,16 @@ const SidebarColor = () => {
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
       </div>
 
-      <div className={`${styles.colorGrid} ${isExpanded && styles.expanded}`}>
-        {colors.map((colorObj, index) => (
+      <div className={`${styles.grid} ${isExpanded && styles.expanded}`}>
+        {colors.map((color, index) => (
           <div
-            key={index}
-            className={`${styles.colorItem} ${colorObj.isChecked ? styles.clicked : ""}`}
+            key={color.name}
+            className={`${styles.gridItem} ${color.isChecked ? styles.clicked : ""}`}
             onClick={() => handleCheckboxClick(index)}>
-            <div className={`${styles.checkbox} ${styles[colorObj.name]}`}>
-              {colorObj.isChecked && <CheckIcon className={styles.checkIcon} />}
+            <div className={`${styles.checkbox} ${styles[color.name]}`}>
+              {color.isChecked && <CheckIcon className={styles.checkIcon} />}
             </div>
-            <span className={styles.text}>{prettyName(colorObj.name)}</span>
+            <span className={styles.itemName}>{prettyName(color.name)}</span>
           </div>
         ))}
       </div>

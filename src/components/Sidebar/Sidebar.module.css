@@ -6,15 +6,6 @@
   width: 260px;
 }
 
-.sidebar > * {
-  margin-bottom: 20px;
-}
-
-.title {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
+/* .sidebar > * {
+  margin: 20px 0px;
+} */

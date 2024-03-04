@@ -6,9 +6,10 @@
   align-items: center;
   justify-content: space-between;
   font-weight: 600;
+  margin: 10px 0px;
 }
 
-.colorGrid {
+.grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 0px;
@@ -16,11 +17,11 @@
   overflow: hidden;
 }
 
-.colorGrid.expanded {
-  height: 256px;
+.grid.expanded {
+  height: 255px;
 }
 
-.colorItem {
+.gridItem {
   font-weight: 400;
   font-size: 14px;
   padding: 20px 0;
@@ -33,15 +34,15 @@
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.colorItem.clicked {
+.gridItem.clicked {
   animation: clickEffect 0.5s ease;
 }
 
-.colorItem:hover .text {
+.gridItem:hover .itemName {
   color: var(--color-500);
 }
 
-.colorItem:hover {
+.gridItem:hover {
   background-color: var(--color-100);
 }
 
@@ -60,7 +61,7 @@
   fill: white;
 }
 
-.text {
+.itemName {
   color: var(--color-800);
   font-size: 12px;
   margin-top: 5px;

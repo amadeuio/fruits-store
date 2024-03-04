@@ -1,0 +1,52 @@
+@import "../../../css/global.css";
+
+.fruitItem {
+  --spacing: 25px;
+  font-weight: 500;
+  background-color: var(--color-100);
+  border-radius: 8px;
+  aspect-ratio: 9 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.favorite {
+  position: absolute;
+  top: var(--spacing);
+  right: var(--spacing);
+  cursor: pointer;
+}
+
+.favorite.clicked {
+  fill: red;
+  animation: clickEffect 0.5s ease;
+}
+
+.image {
+  height: 60px;
+  width: 60px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: var(--font-size);
+}
+
+.info {
+  position: absolute;
+  bottom: var(--spacing);
+  left: var(--spacing);
+}
+
+.family {
+  font-size: 14px;
+  margin: 8px 0;
+  color: var(--color-400);
+  font-weight: 400;
+}
+
+.price {
+  font-size: 14px;
+}

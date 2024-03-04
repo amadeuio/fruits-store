@@ -135,10 +135,3 @@ a {
 input:focus {
   outline: none;
 }
-/* input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding: 0;
-  margin: 0;
-} */
