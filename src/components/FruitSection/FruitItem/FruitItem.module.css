@@ -16,12 +16,24 @@
   position: absolute;
   top: var(--spacing);
   right: var(--spacing);
+  height: 26px;
+  width: 26px;
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.fruitItem:hover .favorite {
+  opacity: 1;
+}
+
+.favorite:hover {
+  transform: scale(1.2);
 }
 
 .favorite.clicked {
   fill: red;
-  animation: clickEffect 0.5s ease;
+  opacity: 1;
 }
 
 .image {
@@ -42,11 +54,25 @@
 
 .family {
   font-size: 14px;
-  margin: 8px 0;
   color: var(--color-400);
   font-weight: 400;
+  margin: 8px 0;
 }
 
 .price {
   font-size: 14px;
+}
+
+.bag {
+  position: absolute;
+  bottom: var(--spacing);
+  right: var(--spacing);
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  transition: transform 0.2s ease;
+}
+
+.bag:hover {
+  transform: scale(1.2);
 }

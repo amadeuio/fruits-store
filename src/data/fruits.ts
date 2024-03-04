@@ -11,7 +11,7 @@ export const initialFruits: Fruits = [
     family: "berry",
     vitamins: ["vitamin-c", "Vitamin K"],
     favorite: true,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -22,7 +22,7 @@ export const initialFruits: Fruits = [
     family: "gourd",
     vitamins: ["Vitamin A", "vitamin-c"],
     favorite: false,
-    inBag: false,
+    inBag: true,
   },
   {
     id: uuidv4(),
@@ -44,7 +44,7 @@ export const initialFruits: Fruits = [
     family: "citrus",
     vitamins: ["vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -55,7 +55,7 @@ export const initialFruits: Fruits = [
     family: "citrus",
     vitamins: ["vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -77,7 +77,7 @@ export const initialFruits: Fruits = [
     family: "other",
     vitamins: ["vitamin-c", "Vitamin B6"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -99,7 +99,7 @@ export const initialFruits: Fruits = [
     family: "rose",
     vitamins: ["vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -132,7 +132,7 @@ export const initialFruits: Fruits = [
     family: "rose",
     vitamins: ["Vitamin A", "vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -154,7 +154,7 @@ export const initialFruits: Fruits = [
     family: "rose",
     vitamins: ["vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -176,7 +176,7 @@ export const initialFruits: Fruits = [
     family: "other",
     vitamins: ["vitamin-c", "Vitamin K"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -198,7 +198,7 @@ export const initialFruits: Fruits = [
     family: "other",
     vitamins: ["Vitamin E", "Vitamin K"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -220,7 +220,7 @@ export const initialFruits: Fruits = [
     family: "laurel",
     vitamins: ["Vitamin K", "Vitamin E"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -242,7 +242,7 @@ export const initialFruits: Fruits = [
     family: "gourd",
     vitamins: ["Vitamin K", "vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -253,7 +253,7 @@ export const initialFruits: Fruits = [
     family: "nightshade",
     vitamins: ["Vitamin A", "vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -264,7 +264,7 @@ export const initialFruits: Fruits = [
     family: "nightshade",
     vitamins: ["vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -275,6 +275,6 @@ export const initialFruits: Fruits = [
     family: "gourd",
     vitamins: ["vitamin-c"],
     favorite: false,
-    inBag: true,
+    inBag: false,
   },
 ];

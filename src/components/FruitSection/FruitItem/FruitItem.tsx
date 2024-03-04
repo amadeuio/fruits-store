@@ -3,6 +3,7 @@ import { Fruit } from "../../../data/types";
 import prettyName from "../../../utils/prettyName";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
 import { useFruitsContext } from "../../../Context";
+import BagIcon from "../../../icons/BagIcon";
 
 interface FruitItemProps {
   fruit: Fruit;
@@ -10,12 +11,23 @@ interface FruitItemProps {
 
 const FruitItem = ({ fruit }: FruitItemProps) => {
   const { fruits, setFruits } = useFruitsContext();
-  const { id, name, family, favorite, price } = fruit;
+  const { id, name, family, favorite, price, inBag } = fruit;
 
   const handleFavoriteClick = () => {
     const updatedFruits = fruits.map((f) => {
       if (f.id === id) {
         return { ...f, favorite: !f.favorite };
+      }
+      return f;
+    });
+
+    setFruits(updatedFruits);
+  };
+
+  const handleBagClick = () => {
+    const updatedFruits = fruits.map((f) => {
+      if (f.id === id) {
+        return { ...f, inBag: !f.inBag };
       }
       return f;
     });
@@ -39,6 +51,7 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
         <div className={styles.family}>{prettyName(family)} Family</div>
         <div className={styles.price}>${price}</div>
       </div>
+      <BagIcon className={styles.bag} isFilled={inBag} onClick={handleBagClick} />
     </div>
   );
 };
