@@ -1,51 +1,18 @@
 import styles from "./Navbar.module.css";
-import SearchIcon from "../../icons/SearchIcon";
-import BagIcon from "../../icons/BagIcon";
-import { useState } from "react";
-import FavoriteIcon from "../../icons/FavoriteIcon";
-import { Link } from "react-router-dom";
-
-const SearchBar = () => {
-  const [query, setQuery] = useState("");
-
-  const handleChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // use a prop function here?
-  };
-
-  return (
-    <form className={styles.form} onSubmit={handleSubmit}>
-      <SearchIcon className={styles.searchIcon} />
-      <input type="text" placeholder="Search" value={query} onChange={handleChange} />
-    </form>
-  );
-};
+import NavbarLinks from "./NavbarLinks/NavbarLinks";
+import NavbarSearch from "./NavbarSearch/NavbarSearch";
+import NavbarFavorite from "./NavbarFavorite/NavbarFavorite";
+import NavbarBag from "./NavbarBag/NavbarBag";
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <h1 className={styles.logo}>fruits.</h1>
-      <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <Link to="/">Home</Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link to="store">Store</Link>
-        </li>
-      </ul>
+      <NavbarLinks />
       <div className={styles.rightContainer}>
-        <SearchBar />
-        <div className={styles.favorite}>
-          <FavoriteIcon className={styles.favoriteIcon} />
-        </div>
-        <div className={styles.bag}>
-          <BagIcon className={styles.bagIcon} />
-          <div className={styles.bagNumber}>2</div>
-        </div>
+        <NavbarSearch />
+        <NavbarFavorite />
+        <NavbarBag />
       </div>
     </nav>
   );

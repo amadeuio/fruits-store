@@ -1,0 +1,39 @@
+@import "../../../css/global.css";
+
+.navbarSearch {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.searchInput {
+  transition: color 0.1s ease, background-color 0.1s ease;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  padding: 13px 20px;
+  padding-left: 43px;
+  font-weight: 700;
+  background-color: var(--color-100);
+}
+
+.searchInput::placeholder {
+  font-weight: 700;
+  color: var(--color-300);
+}
+
+.searchInput:hover {
+  background-color: var(--color-200);
+}
+
+.searchInput:hover::placeholder {
+  color: var(--color-400);
+}

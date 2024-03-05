@@ -1,3 +1,5 @@
+@import "../../css/global.css";
+
 .navbar {
   padding: 20px;
   padding-left: 40px;
@@ -12,20 +14,6 @@
   letter-spacing: -2px;
 }
 
-.navList {
-  display: flex;
-}
-
-.navItem {
-  padding: 15px 10px;
-  border-bottom: 2px solid transparent;
-}
-
-.navItem:hover {
-  box-sizing: border-box;
-  border-color: black;
-}
-
 .rightContainer {
   display: flex;
   align-items: center;
@@ -34,59 +22,4 @@
 
 .rightContainer > * {
   margin: 0 15px;
-}
-
-.form {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.searchIcon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
-}
-
-input {
-  transition: color 0.1s ease, background-color 0.1s ease;
-  font-size: 1rem;
-  border: none;
-  border-radius: 25px;
-  padding: 13px 20px;
-  padding-left: 43px;
-  font-weight: 700;
-  background-color: var(--color-100);
-}
-
-input::placeholder {
-  font-weight: 700;
-  color: var(--color-300);
-}
-
-input:hover {
-  background-color: var(--color-200);
-}
-
-input:hover::placeholder {
-  color: var(--color-400);
-}
-
-.bag {
-  position: relative;
-}
-
-.bagIcon {
-  height: 30px;
-  width: 30px;
-}
-
-.bagNumber {
-  cursor: default;
-  position: absolute;
-  top: 14.5px;
-  left: 12.5px;
-  font-size: 9px;
 }
