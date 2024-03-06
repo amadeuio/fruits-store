@@ -1,0 +1,30 @@
+@import "../../../css/global.css";
+
+.fruitFilters {
+  display: flex;
+}
+
+.fruitFilter {
+  font-size: 10px;
+  font-weight: 500;
+  margin-right: 10px;
+  padding: 5px 12px;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #3895ff;
+}
+
+.closeButton {
+  margin-left: 5px;
+  display: flex;
+}
+
+.closeIcon {
+  cursor: pointer;
+  fill: white;
+  height: 12px;
+  width: 12px;
+}

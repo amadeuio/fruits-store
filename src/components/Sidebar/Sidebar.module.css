@@ -1,8 +1,6 @@
 @import "../../css/global.css";
 
 .sidebar {
-  padding: 30px;
-  padding-left: 40px;
-  width: 260px;
+  padding: 20px 40px;
+  width: 280px;
 }
-

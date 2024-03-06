@@ -3,9 +3,9 @@ import { Filters } from "./types";
 export const initialFilters: Filters = {
   colors: [
     { name: "Purple", isChecked: false },
-    { name: "Green", isChecked: false },
+    { name: "Green", isChecked: true },
     { name: "Brown", isChecked: false },
-    { name: "Red", isChecked: false },
+    { name: "Red", isChecked: true },
     { name: "Orange", isChecked: false },
     { name: "Yellow", isChecked: false },
     { name: "Blue", isChecked: false },
