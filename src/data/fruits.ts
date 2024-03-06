@@ -11,7 +11,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -22,7 +21,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
     inBag: true,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -33,7 +31,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -44,7 +41,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -55,7 +51,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin B6"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -66,7 +61,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C", "Vitamin B6"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -77,7 +71,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -88,7 +81,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -99,7 +91,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -110,7 +101,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C", "Vitamin K"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -121,7 +111,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
 
   {
@@ -133,7 +122,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -144,7 +132,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -155,7 +142,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C", "Vitamin K"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -166,7 +152,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C", "Vitamin K"],
     isFavorite: true,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -177,7 +162,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C", "Vitamin K"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -188,7 +172,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -199,7 +182,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin E", "Vitamin K"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -210,7 +192,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin B6"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -221,7 +202,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin K", "Vitamin E"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -232,7 +212,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin K"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -243,7 +222,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin K"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -254,7 +232,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -265,7 +242,6 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin C"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
   {
     id: uuidv4(),
@@ -276,6 +252,5 @@ export const initialFruits: Fruits = [
     vitamins: ["Vitamin A"],
     isFavorite: false,
     inBag: false,
-    isDisplayed: true,
   },
 ];

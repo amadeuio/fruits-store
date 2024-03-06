@@ -1,6 +1,6 @@
 import styles from "./FruitItem.module.css";
 import { Fruit } from "../../../data/types";
-import { useFruitsContext } from "../../../Context";
+import { useAppContext } from "../../../Context";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
 import BagIcon from "../../../icons/BagIcon";
 import getImageSrc from "../../../utils/getImageSrc";
@@ -10,7 +10,7 @@ interface FruitItemProps {
 }
 
 const FruitItem = ({ fruit }: FruitItemProps) => {
-  const { fruits, setFruits } = useFruitsContext();
+  const { fruits, setFruits } = useAppContext();
   const { id, name, price, family, isFavorite, inBag } = fruit;
 
   const handleFavoriteClick = () => {

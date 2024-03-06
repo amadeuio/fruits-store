@@ -1,15 +1,14 @@
-import styles from "./SidebarVitamins.module.css";
-import ExpandIcon from "../../../icons/ExpandIcon";
-import { initialVitamins } from "../../../data/categories";
 import { useState } from "react";
+import { useAppContext } from "../../../Context";
+import styles from "./SidebarVitamins.module.css";
+
 import CheckIcon from "../../../icons/CheckIcon";
-import { VitaminObject } from "../../../data/types";
-import { useFruitsContext } from "../../../Context";
+import ExpandIcon from "../../../icons/ExpandIcon";
 
 const SidebarVitamins = () => {
-  const [vitamins, setVitamins] = useState(initialVitamins);
   const [isExpanded, setIsExpanded] = useState(true);
-  const { fruits, setFruits } = useFruitsContext();
+  const { filters, setFilters } = useAppContext();
+  const { vitamins } = filters;
 
   const toggleNavbar = () => {
     setIsExpanded(!isExpanded);
@@ -18,26 +17,11 @@ const SidebarVitamins = () => {
   const handleCheckboxClick = (index) => {
     const updatedVitamins = [...vitamins];
     updatedVitamins[index].isChecked = !updatedVitamins[index].isChecked;
-    setVitamins(updatedVitamins);
 
-    filterFruits(updatedVitamins);
+    setFilters({ ...filters, vitamins: updatedVitamins });
   };
 
-  const filterFruits = (vitamins: VitaminObject[]) => {
-    const selectedVitamin = vitamins.filter((color) => color.isChecked).map((color) => color.name);
-
-    const updatedFruits = fruits.map((fruit) => {
-      const isDisplayed = selectedVitamin.every((color) => fruit.vitamins.includes(color));
-      return {
-        ...fruit,
-        isDisplayed,
-      };
-    });
-
-    setFruits(updatedFruits);
-  };
-
-  const checkedCount = vitamins.filter((colorObj) => colorObj.isChecked).length;
+  const checkedCount = vitamins.filter((vitamin) => vitamin.isChecked).length;
 
   return (
     <div className={styles.SidebarVitamins}>

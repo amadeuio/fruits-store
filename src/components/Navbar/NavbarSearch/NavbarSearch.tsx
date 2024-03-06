@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useAppContext } from "../../../Context";
 import styles from "./NavbarSearch.module.css";
+
 import SearchIcon from "../../../icons/SearchIcon";
 
 const NavbarSearch = () => {
-  const [query, setQuery] = useState("");
+  const { filters, setFilters } = useAppContext();
+  const { query } = filters;
 
   const handleChange = (event) => {
-    setQuery(event.target.value);
+    const newQuery = event.target.value;
+    setFilters({ ...filters, query: newQuery });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // use a prop function here?
+    // Handle form submission if needed
   };
 
   return (

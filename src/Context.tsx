@@ -1,4 +1,5 @@
 import { Fruits } from "./data/types";
+import { Filters } from "./data/types";
 import {
   createContext,
   useState,
@@ -9,15 +10,16 @@ import {
   SetStateAction,
 } from "react";
 import { initialFruits } from "./data/fruits";
+import { initialFilters } from "./data/filters";
 
 type SetFruits = Dispatch<SetStateAction<Fruits>>;
-type SetIsFavoriteOpen = Dispatch<SetStateAction<boolean>>;
+type SetFilters = Dispatch<SetStateAction<Filters>>;
 
 interface FruitsContext {
   fruits: Fruits;
   setFruits: SetFruits;
-  isFavoriteOpen: boolean;
-  setIsFavoriteOpen: SetIsFavoriteOpen;
+  filters: Filters;
+  setFilters: SetFilters;
 }
 
 interface FruitsContextProviderProps {
@@ -27,16 +29,16 @@ interface FruitsContextProviderProps {
 const FruitsContext = createContext<FruitsContext | undefined>(undefined);
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const useFruitsContext = () => {
+export const useAppContext = () => {
   return useContext(FruitsContext);
 };
 
 export const FruitsContextProvider: FC<FruitsContextProviderProps> = ({ children }) => {
   const [fruits, setFruits] = useState<Fruits>(initialFruits);
-  const [isFavoriteOpen, setIsFavoriteOpen] = useState<boolean>(false);
+  const [filters, setFilters] = useState<Filters>(initialFilters);
 
   return (
-    <FruitsContext.Provider value={{ fruits, setFruits, isFavoriteOpen, setIsFavoriteOpen }}>
+    <FruitsContext.Provider value={{ fruits, setFruits, filters, setFilters }}>
       {children}
     </FruitsContext.Provider>
   );

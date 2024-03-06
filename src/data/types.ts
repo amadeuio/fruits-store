@@ -13,17 +13,7 @@ export type Family =
   | "Laurel"
   | "Other";
 
-export type Vitamin =
-  | "Vitamin C"
-  | "Vitamin A"
-  | "Vitamin K"
-  | "Vitamin E"
-  | "Vitamin B6"
-  | "Vitamin B9"
-  | "Vitamin B2"
-  | "Vitamin B3"
-  | "Vitamin B1"
-  | "Vitamin B5";
+export type Vitamin = "Vitamin C" | "Vitamin A" | "Vitamin K" | "Vitamin E" | "Vitamin B6";
 
 export interface ColorObject {
   name: Color;
@@ -49,7 +39,14 @@ export interface Fruit {
   vitamins: Vitamin[];
   isFavorite: boolean;
   inBag: boolean;
-  isDisplayed: boolean;
 }
 
 export type Fruits = Fruit[];
+
+export interface Filters {
+  colors: ColorObject[];
+  families: FamilyObject[];
+  vitamins: VitaminObject[];
+  favorite: boolean;
+  query: string;
+}

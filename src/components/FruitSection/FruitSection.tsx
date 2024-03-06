@@ -1,13 +1,19 @@
+import { useAppContext } from "../../Context";
 import styles from "./FruitSection.module.css";
+import filterFruits from "../../utils/filterFruits";
+
 import FruitItem from "./FruitItem/FruitItem";
-import { useFruitsContext } from "../../Context";
 
 const FruitSection = () => {
-  const { fruits } = useFruitsContext();
+  const { fruits, filters } = useAppContext();
+
+  const filteredFruits = filterFruits(fruits, filters);
 
   return (
     <div className={styles.fruitGrid}>
-      {fruits.map((fruit) => fruit.isDisplayed && <FruitItem key={fruit.id} fruit={fruit} />)}
+      {filteredFruits.map((fruit) => (
+        <FruitItem key={fruit.id} fruit={fruit} />
+      ))}
     </div>
   );
 };

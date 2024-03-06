@@ -1,15 +1,14 @@
-import styles from "./SidebarColor.module.css";
 import { useState } from "react";
-import { useFruitsContext } from "../../../Context";
-import { initialColors } from "../../../data/categories";
+import { useAppContext } from "../../../Context";
+import styles from "./SidebarColor.module.css";
+
 import CheckIcon from "../../../icons/CheckIcon";
 import ExpandIcon from "../../../icons/ExpandIcon";
-import { ColorObject } from "../../../data/types";
 
 const SidebarColor = () => {
-  const [colors, setColors] = useState(initialColors);
   const [isExpanded, setIsExpanded] = useState(true);
-  const { fruits, setFruits } = useFruitsContext();
+  const { filters, setFilters } = useAppContext();
+  const { colors } = filters;
 
   const toggleNavbar = () => {
     setIsExpanded(!isExpanded);
@@ -18,23 +17,8 @@ const SidebarColor = () => {
   const handleCheckboxClick = (index) => {
     const updatedColors = [...colors];
     updatedColors[index].isChecked = !updatedColors[index].isChecked;
-    setColors(updatedColors);
 
-    filterFruits(updatedColors);
-  };
-
-  const filterFruits = (colors: ColorObject[]) => {
-    const selectedColors = colors.filter((color) => color.isChecked).map((color) => color.name);
-
-    const updatedFruits = fruits.map((fruit) => {
-      const isDisplayed = selectedColors.every((color) => fruit.colors.includes(color));
-      return {
-        ...fruit,
-        isDisplayed,
-      };
-    });
-
-    setFruits(updatedFruits);
+    setFilters({ ...filters, colors: updatedColors });
   };
 
   const checkedCount = colors.filter((color) => color.isChecked).length;

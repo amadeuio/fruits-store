@@ -1,42 +1,26 @@
-import { useState } from "react";
+import { useAppContext } from "../../../Context";
 import styles from "./NavbarFavorite.module.css";
+
 import FavoriteIcon from "../../../icons/FavoriteIcon";
-import { useFruitsContext } from "../../../Context";
 
 const NavbarFavorite = () => {
-  const { fruits, setFruits } = useFruitsContext();
-  const [isFavoriteOpen, setIsFavoriteOpen] = useState(false);
+  const { fruits, filters, setFilters } = useAppContext();
+  const { favorite } = filters;
 
   const handleFavoriteClick = () => {
-    setIsFavoriteOpen(!isFavoriteOpen);
-
-    if (!isFavoriteOpen) {
-      const updatedFruits = fruits.map((f) => ({
-        ...f,
-        isDisplayed: f.isFavorite,
-      }));
-
-      setFruits(updatedFruits);
-    } else {
-      const updatedFruits = fruits.map((f) => ({
-        ...f,
-        isDisplayed: true,
-      }));
-
-      setFruits(updatedFruits);
-    }
+    setFilters({ ...filters, favorite: !favorite });
   };
 
-  const favoriteFruits = fruits.filter((fruit) => fruit.isFavorite);
+  const favoriteCount = fruits.filter((fruit) => fruit.isFavorite);
 
   return (
     <div className={styles.navbarFavorite}>
       <FavoriteIcon
-        className={`${styles.favorite} ${isFavoriteOpen ? styles.clicked : ""}`}
-        isFilled={isFavoriteOpen}
+        className={`${styles.favorite} ${favorite ? styles.clicked : ""}`}
+        isFilled={favorite}
         onClick={handleFavoriteClick}
       />
-      <div className={styles.number}>{favoriteFruits.length}</div>
+      <div className={styles.number}>{favoriteCount.length}</div>
     </div>
   );
 };
