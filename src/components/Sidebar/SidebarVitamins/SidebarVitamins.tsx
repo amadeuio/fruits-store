@@ -3,10 +3,13 @@ import ExpandIcon from "../../../icons/ExpandIcon";
 import { initialVitamins } from "../../../data/categories";
 import { useState } from "react";
 import CheckIcon from "../../../icons/CheckIcon";
+import { VitaminObject } from "../../../data/types";
+import { useFruitsContext } from "../../../Context";
 
 const SidebarVitamins = () => {
   const [vitamins, setVitamins] = useState(initialVitamins);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
+  const { fruits, setFruits } = useFruitsContext();
 
   const toggleNavbar = () => {
     setIsExpanded(!isExpanded);
@@ -16,6 +19,22 @@ const SidebarVitamins = () => {
     const updatedVitamins = [...vitamins];
     updatedVitamins[index].isChecked = !updatedVitamins[index].isChecked;
     setVitamins(updatedVitamins);
+
+    filterFruits(updatedVitamins);
+  };
+
+  const filterFruits = (vitamins: VitaminObject[]) => {
+    const selectedVitamin = vitamins.filter((color) => color.isChecked).map((color) => color.name);
+
+    const updatedFruits = fruits.map((fruit) => {
+      const isDisplayed = selectedVitamin.every((color) => fruit.vitamins.includes(color));
+      return {
+        ...fruit,
+        isDisplayed,
+      };
+    });
+
+    setFruits(updatedFruits);
   };
 
   const checkedCount = vitamins.filter((colorObj) => colorObj.isChecked).length;

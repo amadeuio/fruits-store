@@ -49,6 +49,7 @@ export interface Fruit {
   vitamins: Vitamin[];
   isFavorite: boolean;
   inBag: boolean;
+  isDisplayed: boolean;
 }
 
 export type Fruits = Fruit[];

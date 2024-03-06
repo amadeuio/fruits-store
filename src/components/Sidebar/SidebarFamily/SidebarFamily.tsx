@@ -3,22 +3,44 @@ import ExpandIcon from "../../../icons/ExpandIcon";
 import { initialFamilies } from "../../../data/categories";
 import { useState } from "react";
 import CheckIcon from "../../../icons/CheckIcon";
+import { useFruitsContext } from "../../../Context";
+import { FamilyObject } from "../../../data/types";
 
 const SidebarFamily = () => {
   const [families, setFamilies] = useState(initialFamilies);
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
+  const { fruits, setFruits } = useFruitsContext();
 
   const toggleNavbar = () => {
     setIsExpanded(!isExpanded);
   };
 
   const handleCheckboxClick = (index) => {
-    const updatedFamilies = [...families];
-    updatedFamilies[index].isChecked = !updatedFamilies[index].isChecked;
+    const updatedFamilies = families.map((family, i) => ({
+      ...family,
+      isChecked: i === index ? !family.isChecked : false,
+    }));
+
     setFamilies(updatedFamilies);
+
+    filterFruits(updatedFamilies);
   };
 
-  const checkedCount = families.filter((colorObj) => colorObj.isChecked).length;
+  const filterFruits = (families: FamilyObject[]) => {
+    const selectedFamily = families.filter((color) => color.isChecked).map((color) => color.name);
+
+    const updatedFruits = fruits.map((fruit) => {
+      const isDisplayed = selectedFamily.every((color) => fruit.family.includes(color));
+      return {
+        ...fruit,
+        isDisplayed,
+      };
+    });
+
+    setFruits(updatedFruits);
+  };
+
+  const checkedCount = families.filter((family) => family.isChecked).length;
 
   return (
     <div className={styles.SidebarFamily}>

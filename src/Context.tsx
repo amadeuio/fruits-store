@@ -11,10 +11,13 @@ import {
 import { initialFruits } from "./data/fruits";
 
 type SetFruits = Dispatch<SetStateAction<Fruits>>;
+type SetIsFavoriteOpen = Dispatch<SetStateAction<boolean>>;
 
 interface FruitsContext {
   fruits: Fruits;
   setFruits: SetFruits;
+  isFavoriteOpen: boolean;
+  setIsFavoriteOpen: SetIsFavoriteOpen;
 }
 
 interface FruitsContextProviderProps {
@@ -30,6 +33,11 @@ export const useFruitsContext = () => {
 
 export const FruitsContextProvider: FC<FruitsContextProviderProps> = ({ children }) => {
   const [fruits, setFruits] = useState<Fruits>(initialFruits);
+  const [isFavoriteOpen, setIsFavoriteOpen] = useState<boolean>(false);
 
-  return <FruitsContext.Provider value={{ fruits, setFruits }}>{children}</FruitsContext.Provider>;
+  return (
+    <FruitsContext.Provider value={{ fruits, setFruits, isFavoriteOpen, setIsFavoriteOpen }}>
+      {children}
+    </FruitsContext.Provider>
+  );
 };

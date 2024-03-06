@@ -1,1 +1,24 @@
 @import "../../../css/global.css";
+
+.navbarFavorite {
+  position: relative;
+}
+
+.favorite {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  transition: transform 0.2s ease;
+}
+
+.favorite.clicked {
+  fill: black;
+}
+
+.number {
+  z-index: -1;
+  position: absolute;
+  top: 11px;
+  left: 12.5px;
+  font-size: 9px;
+}
