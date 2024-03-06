@@ -1,9 +1,9 @@
-import styles from "./FruitFilters.module.css";
+import styles from "./ActiveFilters.module.css";
 import { useAppContext } from "../../../Context";
 import getCheckedFilters from "../../../utils/getCheckedFilters";
 import CloseIcon from "../../../icons/CloseIcon";
 
-const FruitFilters = () => {
+const ActiveFilters = () => {
   const { filters, setFilters } = useAppContext();
   const { colors, families, vitamins } = filters;
 
@@ -29,9 +29,9 @@ const FruitFilters = () => {
   if (!checkedFilters.length) return null;
 
   return (
-    <div className={styles.fruitFilters}>
+    <div className={styles.activeFilters}>
       {checkedFilters.map((filter) => (
-        <div key={filter.name} className={styles.fruitFilter}>
+        <div key={filter.name} className={styles.activeFilter}>
           {filter.name}
           <div className={styles.closeButton} onClick={() => handleCloseClick(filter.name)}>
             <CloseIcon className={styles.closeIcon} />
@@ -42,4 +42,4 @@ const FruitFilters = () => {
   );
 };
 
-export default FruitFilters;
+export default ActiveFilters;

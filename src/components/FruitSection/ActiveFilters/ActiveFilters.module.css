@@ -1,10 +1,10 @@
 @import "../../../css/global.css";
 
-.fruitFilters {
+.activeFilters {
   display: flex;
 }
 
-.fruitFilter {
+.activeFilter {
   font-size: 10px;
   font-weight: 500;
   margin-right: 10px;

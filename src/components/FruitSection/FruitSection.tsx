@@ -3,7 +3,7 @@ import styles from "./FruitSection.module.css";
 import filterFruits from "../../utils/filterFruits";
 
 import FruitItem from "./FruitItem/FruitItem";
-import FruitFilters from "./FruitFilters/FruitFilters";
+import ActiveFilters from "./ActiveFilters/ActiveFilters";
 
 const FruitSection = () => {
   const { fruits, filters } = useAppContext();
@@ -20,9 +20,7 @@ const FruitSection = () => {
           </span>
         )}
       </h2>
-
-      <FruitFilters />
-
+      <ActiveFilters />
       <div className={styles.fruitGrid}>
         {filteredFruits.map((fruit) => (
           <FruitItem key={fruit.id} fruit={fruit} />
