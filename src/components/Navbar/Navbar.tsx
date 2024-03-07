@@ -3,11 +3,14 @@ import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import NavbarSearch from "./NavbarSearch/NavbarSearch";
 import NavbarFavorite from "./NavbarFavorite/NavbarFavorite";
 import NavbarBag from "./NavbarBag/NavbarBag";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <h1 className={styles.logo}>fruits.</h1>
+      <Link to="home">
+        <h1 className={styles.logo}>fruits.</h1>
+      </Link>
       <NavbarLinks />
       <div className={styles.rightContainer}>
         <NavbarSearch />

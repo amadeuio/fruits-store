@@ -1,6 +1,6 @@
 import { useAppContext } from "../../../Context";
 import styles from "./NavbarFavorite.module.css";
-
+import { Link } from "react-router-dom";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
 
 const NavbarFavorite = () => {
@@ -14,14 +14,16 @@ const NavbarFavorite = () => {
   const favoriteCount = fruits.filter((fruit) => fruit.isFavorite);
 
   return (
-    <div className={styles.navbarFavorite}>
-      <FavoriteIcon
-        className={`${styles.favorite} ${favorite ? styles.clicked : ""}`}
-        isFilled={favorite}
-        onClick={handleFavoriteClick}
-      />
-      <div className={styles.number}>{favoriteCount.length}</div>
-    </div>
+    <Link to="store">
+      <div className={styles.navbarFavorite}>
+        <FavoriteIcon
+          className={`${styles.favorite} ${favorite ? styles.clicked : ""}`}
+          isFilled={favorite}
+          onClick={handleFavoriteClick}
+        />
+        <div className={styles.number}>{favoriteCount.length}</div>
+      </div>
+    </Link>
   );
 };
 

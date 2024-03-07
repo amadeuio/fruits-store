@@ -3,6 +3,7 @@ import App from "./App.tsx";
 import Store from "./components/Store/Store.tsx";
 import Home from "./components/Home/Home.tsx";
 import ErrorPage from "./components/ErrorPage/ErrorPage.tsx";
+import Bag from "./components/Bag/Bag.tsx";
 
 import "./css/reset.css";
 import "./css/global.css";
@@ -25,6 +26,10 @@ const Router = () => {
         {
           path: "/store",
           element: <Store />,
+        },
+        {
+          path: "/bag",
+          element: <Bag />,
         },
       ],
     },
