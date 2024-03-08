@@ -70,7 +70,7 @@ export const initialFruits: Fruits = [
     family: "Cashew",
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
-    inBag: false,
+    inBag: true,
   },
   {
     id: uuidv4(),
@@ -80,7 +80,7 @@ export const initialFruits: Fruits = [
     family: "Rose",
     vitamins: ["Vitamin C"],
     isFavorite: false,
-    inBag: false,
+    inBag: true,
   },
   {
     id: uuidv4(),

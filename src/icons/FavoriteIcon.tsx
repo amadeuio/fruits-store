@@ -1,7 +1,7 @@
 interface Props {
   className?: string;
   isFilled?: boolean;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => void | (() => void);
 }
 
 const FavoriteIcon: React.FC<Props> = ({ className, isFilled = false, onClick }) => {

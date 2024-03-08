@@ -1,6 +1,7 @@
 @import "../../../css/global.css";
 
 .fruitItem {
+  z-index: 1;
   --spacing: 25px;
   font-weight: 500;
   background-color: var(--color-100);
@@ -13,6 +14,7 @@
 }
 
 .favorite {
+  z-index: 4;
   position: absolute;
   top: var(--spacing);
   right: var(--spacing);

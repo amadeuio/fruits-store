@@ -18,3 +18,11 @@
   left: 12.5px;
   font-size: 9px;
 }
+
+.navbarBag .bagTooltip {
+  z-index: 2;
+  color: #222;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}

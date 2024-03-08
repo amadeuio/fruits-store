@@ -1,44 +1,46 @@
 import styles from "./NavbarBag.module.css";
 import BagIcon from "../../../icons/BagIcon";
-import NavbarBagDropdown from "./BagDropdown/BagDropdown";
 import { useAppContext } from "../../../Context";
 import { Link } from "react-router-dom";
 
-import { useState } from "react";
+import { Tooltip } from "react-tooltip";
+import BagTooltip from "./BagTooltip/BagTooltip";
+import "react-tooltip/dist/react-tooltip.css";
+
+import { useLocation } from "react-router-dom";
 
 const NavbarBag = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isBagOpen, setIsBagOpen] = useState(false);
-  const { fruits } = useAppContext();
-
-  const numberInBag = fruits.filter((fruit) => fruit.inBag).length;
+  const { fruits, setFilters } = useAppContext();
+  const location = useLocation();
 
   const handleBagClick = () => {
-    setIsBagOpen(!isBagOpen);
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      favorite: false,
+    }));
   };
 
-  const handleMouseEnter = () => {
-    setIsDropdownOpen(true);
-  };
+  const isBagOpen = location.pathname === "/bag";
 
-  const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
-  };
+  const bagCount = fruits.filter((fruit) => fruit.inBag).length;
 
   return (
     <div className={styles.navbarBag}>
       <Link to="bag">
-        <div
-          className={styles.bagContainer}
-          onClick={handleBagClick}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}>
+        <div data-tooltip-id="bag-tooltip" className={styles.bagContainer} onClick={handleBagClick}>
           <BagIcon className={styles.bagIcon} isFilled={isBagOpen} />
-          <div className={styles.number}>{numberInBag}</div>
+          <div className={styles.number}>{bagCount}</div>
         </div>
       </Link>
-
-      <NavbarBagDropdown isOpen={isDropdownOpen} />
+      <Tooltip
+        id="bag-tooltip"
+        className={styles.bagTooltip}
+        clickable={true}
+        place="bottom-end"
+        opacity={1}
+        border="1px solid var(--color-200)">
+        <BagTooltip />
+      </Tooltip>
     </div>
   );
 };

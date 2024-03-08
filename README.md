@@ -1,3 +1,3 @@
 # Fruits Store
 
-Ecommerce fruits store with React. Currently under development.
+Powerful and lightweight e-commerce store with React. Currently under development.

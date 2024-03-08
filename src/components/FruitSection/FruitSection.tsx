@@ -11,22 +11,24 @@ const FruitSection = () => {
   const filteredFruits = filterFruits(fruits, filters);
 
   return (
-    <div className={styles.fruitSection}>
-      <h2 className={styles.title}>
-        Items ({filteredFruits.length}){" "}
-        {filters.favorite && (
-          <span className={styles.favoritesTitle}>
-            <span className={styles.emDash}>—</span> Favorites
-          </span>
-        )}
-      </h2>
-      <ActiveFilters />
-      <div className={styles.fruitGrid}>
-        {filteredFruits.map((fruit) => (
-          <FruitItem key={fruit.id} fruit={fruit} />
-        ))}
+    <>
+      <div className={styles.fruitSection}>
+        <h2 className={styles.title}>
+          Items ({filteredFruits.length}){" "}
+          {filters.favorite && (
+            <span className={styles.favoritesTitle}>
+              <span className={styles.emDash}>—</span> Favorites
+            </span>
+          )}
+        </h2>
+        <ActiveFilters />
+        <div className={styles.fruitGrid}>
+          {filteredFruits.map((fruit) => (
+            <FruitItem key={fruit.id} fruit={fruit} />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
