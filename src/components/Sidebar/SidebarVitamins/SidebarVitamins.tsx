@@ -26,7 +26,7 @@ const SidebarVitamins = () => {
   return (
     <div className={styles.SidebarVitamins}>
       <div className={styles.title} onClick={toggleNavbar}>
-        Vitamins {checkedCount ? `(${checkedCount})` : ""}
+        <h2>Vitamins {checkedCount ? `(${checkedCount})` : ""}</h2>
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
       </div>
       <div className={`${styles.list} ${isExpanded ? styles.expanded : ""}`}>

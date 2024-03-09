@@ -1,0 +1,97 @@
+@import "../../css/global.css";
+
+/* Spacing */
+
+.bag {
+  padding: 50px;
+}
+
+.bagTop {
+  margin-bottom: 30px;
+}
+
+.checkout {
+  width: 400px;
+  padding: 50px;
+}
+
+.checkout > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.checkoutContainer {
+  margin-left: 80px;
+}
+
+/* Spacing */
+
+.bagBottom {
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.fruitsContainer {
+  flex: 1;
+}
+
+.checkout {
+  border: 1px solid var(--color-300);
+  border-radius: 8px;
+}
+
+.priceTitle {
+  font-size: 24px;
+}
+
+.horizontalLine {
+  border: 1px solid rgb(234, 234, 234);
+}
+
+.subtotal,
+.vat,
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subtotal,
+.vat {
+  font-size: 14px;
+  color: var(--color-700);
+}
+
+.checkoutButton {
+  cursor: pointer;
+  border: 0;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  background-color: var(--color-blue);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: var(--color-blue-dark);
+}
+
+.bagIcon {
+  transform: translateY(-1px);
+  margin-right: 4px;
+  width: 20px;
+  fill: white;
+}
+
+.backButton {
+  display: none;
+  position: absolute;
+  top: 0;
+}

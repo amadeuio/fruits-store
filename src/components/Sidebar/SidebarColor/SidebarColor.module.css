@@ -1,11 +1,8 @@
-@import "../../../css/global.css";
-
 .title {
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 600;
   margin-bottom: 10px;
 }
 
@@ -82,7 +79,7 @@
 }
 
 .Red {
-  background-color: rgb(255, 70, 70);
+  background-color: var(--color-red);
 }
 
 .Orange {

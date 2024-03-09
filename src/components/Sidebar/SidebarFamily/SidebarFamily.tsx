@@ -28,7 +28,7 @@ const SidebarFamily = () => {
   return (
     <div className={styles.SidebarFamily}>
       <div className={styles.title} onClick={toggleNavbar}>
-        Family {checkedCount ? `(${checkedCount})` : ""}
+        <h2>Family {checkedCount ? `(${checkedCount})` : ""}</h2>
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
       </div>
       <div className={`${styles.list} ${isExpanded ? styles.expanded : ""}`}>

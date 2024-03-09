@@ -1,0 +1,80 @@
+/* Spacing */
+
+.bagFruit:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.infoContainer > *:not(:last-child) {
+  margin-bottom: 6px;
+}
+
+.infoContainer {
+  margin-right: 100px;
+}
+
+.imageContainer {
+  padding: 55px;
+  margin-right: 30px;
+}
+
+.price {
+  margin-right: 50px;
+}
+
+/* Spacing */
+
+.bagFruit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.leftContainer {
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  height: 35px;
+  width: auto;
+}
+
+.imageContainer {
+  background-color: var(--color-100);
+  border-radius: 8px;
+}
+
+.qty {
+  font-size: 14px;
+  color: var(--color-400);
+  font-weight: 400;
+}
+
+.delete {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.deleteIcon {
+  height: 14px;
+  width: 14px;
+  fill: var(--color-red);
+}
+
+.delete {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: solid 1px var(--color-200);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+  background-color: var(--color-200);
+}

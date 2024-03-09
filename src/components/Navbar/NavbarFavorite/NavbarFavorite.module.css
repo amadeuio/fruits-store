@@ -16,6 +16,7 @@
 }
 
 .number {
+  font-weight: 700;
   z-index: -1;
   position: absolute;
   top: 11px;

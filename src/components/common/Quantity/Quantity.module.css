@@ -1,0 +1,32 @@
+.quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.number {
+  font-size: 14px;
+  margin: 0 14px;
+}
+
+.modify {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: solid 1px var(--color-300);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.modify:hover {
+  background-color: var(--color-200);
+}
+
+.modifyIcon {
+  height: 14px;
+  width: 14px;
+  fill: var(--color-400);
+}

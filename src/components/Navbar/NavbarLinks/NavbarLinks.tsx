@@ -5,10 +5,10 @@ const NavbarLinks = () => {
   return (
     <ul className={styles.navbarLinks}>
       <li className={styles.link}>
-        <Link to="/">Home</Link>
+        <Link to="/"><h3>Home</h3></Link>
       </li>
       <li className={styles.link}>
-        <Link to="store">Store</Link>
+        <Link to="store"><h3>Store</h3></Link>
       </li>
     </ul>
   );

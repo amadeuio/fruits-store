@@ -1,5 +1,3 @@
-@import "../../../css/global.css";
-
 .fruitItem {
   z-index: 1;
   --spacing: 25px;
@@ -34,18 +32,13 @@
 }
 
 .favorite.clicked {
-  fill: red;
+  fill: var(--color-red);
   opacity: 1;
 }
 
 .image {
   height: 60px;
   width: 60px;
-}
-
-.name {
-  font-weight: 600;
-  font-size: var(--font-size);
 }
 
 .info {
@@ -55,14 +48,8 @@
 }
 
 .family {
-  font-size: 14px;
-  color: var(--color-400);
-  font-weight: 400;
   margin: 8px 0;
-}
-
-.price {
-  font-size: 14px;
+  color: var(--color-400);
 }
 
 .bag {

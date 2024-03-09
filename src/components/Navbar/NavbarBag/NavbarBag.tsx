@@ -21,7 +21,6 @@ const NavbarBag = () => {
   };
 
   const isBagOpen = location.pathname === "/bag";
-
   const bagCount = fruits.filter((fruit) => fruit.inBag).length;
 
   return (
@@ -32,15 +31,17 @@ const NavbarBag = () => {
           <div className={styles.number}>{bagCount}</div>
         </div>
       </Link>
-      <Tooltip
-        id="bag-tooltip"
-        className={styles.bagTooltip}
-        clickable={true}
-        place="bottom-end"
-        opacity={1}
-        border="1px solid var(--color-200)">
-        <BagTooltip />
-      </Tooltip>
+      {!isBagOpen && (
+        <Tooltip
+          id="bag-tooltip"
+          className={styles.bagTooltip}
+          clickable={true}
+          place="bottom-end"
+          opacity={1}
+          border="1px solid var(--color-200)">
+          <BagTooltip />
+        </Tooltip>
+      )}
     </div>
   );
 };

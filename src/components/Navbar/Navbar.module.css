@@ -8,12 +8,6 @@
   align-items: center;
 }
 
-.logo {
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: -2px;
-}
-
 .rightContainer {
   display: flex;
   align-items: center;

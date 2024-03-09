@@ -1,11 +1,8 @@
-@import "../../../css/global.css";
-
 .title {
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-weight: 600;
   margin: 10px 0px;
 }
 

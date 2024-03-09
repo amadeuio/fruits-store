@@ -1,0 +1,13 @@
+.inStock {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--color-blue);
+}
+
+.box {
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+  fill: var(--color-blue);
+}

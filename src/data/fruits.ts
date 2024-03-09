@@ -15,12 +15,12 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Melon",
-    price: 3.49,
+    price: 3.5,
     colors: ["Green"],
     family: "Gourd",
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -45,12 +45,12 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Banana",
-    price: 0.79,
+    price: 1,
     colors: ["Yellow"],
     family: "Other",
     vitamins: ["Vitamin B6"],
     isFavorite: false,
-    inBag: false,
+    inBag: true,
   },
   {
     id: uuidv4(),
@@ -65,22 +65,22 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Mango",
-    price: 4.99,
+    price: 5.0,
     colors: ["Yellow", "Red", "Green"],
     family: "Cashew",
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
     name: "Red Apple",
-    price: 1.29,
+    price: 1.3,
     colors: ["Red"],
     family: "Rose",
     vitamins: ["Vitamin C"],
     isFavorite: false,
-    inBag: true,
+    inBag: false,
   },
   {
     id: uuidv4(),
@@ -105,12 +105,12 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Peach",
-    price: 2.99,
+    price: 3.0,
     colors: ["Orange"],
     family: "Rose",
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
-    inBag: false,
+    inBag: true,
   },
 
   {
@@ -141,7 +141,7 @@ export const initialFruits: Fruits = [
     family: "Berry",
     vitamins: ["Vitamin C", "Vitamin K"],
     isFavorite: false,
-    inBag: false,
+    inBag: true,
   },
   {
     id: uuidv4(),

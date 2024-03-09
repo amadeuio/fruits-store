@@ -26,7 +26,7 @@ const SidebarColor = () => {
   return (
     <div className={styles.sidebarColor}>
       <div className={styles.title} onClick={toggleNavbar}>
-        Color {checkedCount ? `(${checkedCount})` : ""}
+        <h2>Color {checkedCount ? `(${checkedCount})` : ""}</h2>
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
       </div>
 

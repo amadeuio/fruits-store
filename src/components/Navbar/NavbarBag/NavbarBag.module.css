@@ -12,6 +12,7 @@
 
 .number {
   z-index: -1;
+  font-weight: 700;
   cursor: default;
   position: absolute;
   top: 14.5px;

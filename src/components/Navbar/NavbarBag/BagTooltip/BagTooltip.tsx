@@ -2,9 +2,15 @@ import styles from "./BagTooltip.module.css";
 import { useAppContext } from "../../../../Context";
 import getImageSrc from "../../../../utils/getImageSrc";
 import BagIcon from "../../../../icons/BagIcon";
+import InStock from "../../../common/InStock/InStock";
+import { Link } from "react-router-dom";
 
 const BagTooltip = () => {
   const { fruits } = useAppContext();
+
+  const handleCheckoutClick = () => {
+    alert("This is not an actual store. 😁");
+  };
 
   const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
   const subtotalPrice: string = fruitsInBag
@@ -15,45 +21,49 @@ const BagTooltip = () => {
 
   return (
     <div className={styles.bagTooltip}>
-      <h3 className={styles.title}>Shopping Bag</h3>
+      <h2 className={styles.title}>Shopping Bag</h2>
       <hr className={styles.horizontalLine} />
-      <ul>
-        {fruitsInBag.map((fruit) => (
-          <li className={styles.fruit} key={fruit.id}>
-            <img className={styles.image} src={getImageSrc(fruit.name)} alt={fruit.name} />
-            <div className={styles.info}>
-              <div className={styles.nameAndFamily}>
-                <h4 className={styles.name}>{fruit.name}</h4>
-                <div className={styles.family}>{fruit.family} Family</div>
+
+      {fruitsInBag.length ? (
+        <ul>
+          {fruitsInBag.map((fruit) => (
+            <li className={styles.fruit} key={fruit.id}>
+              <div className={styles.leftContainer}>
+                <div className={styles.imageContainer}>
+                  <img className={styles.image} src={getImageSrc(fruit.name)} alt={fruit.name} />
+                </div>
+                <div className={styles.infoContainer}>
+                  <h3 className={styles.name}>{fruit.name}</h3>
+                  <InStock />
+                  <div className={styles.qty}>Qty: 3</div>
+                </div>
               </div>
-              <div className={styles.price}>${fruit.price}</div>
-            </div>
-          </li>
-        ))}
-      </ul>
 
-      <hr className={styles.horizontalLine} />
-
-      <div className={styles.subtotal}>
-        <div className={styles.subtotalName}>Subtotal</div>
-        <div className={styles.subtotalPrice}>${subtotalPrice}</div>
-      </div>
-      <div className={styles.vat}>
-        <div className={styles.vatName}>VAT (20%)</div>
-        <div className={styles.vatPrice}>${vatPrice}</div>
-      </div>
+              <h5>${fruit.price}</h5>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <span className={styles.emptyBag}>Bag is empty.</span>
+      )}
 
       <hr className={styles.horizontalLine} />
 
       <div className={styles.total}>
-        <div className={styles.totalName}>Total</div>
-        <div className={styles.totalPrice}>${totalPrice}</div>
+        <div className={styles.totalAndVat}>
+          <h2>Total</h2>
+          <span className={styles.inclVat}>(incl. VAT)</span>
+        </div>
+        <h2>${totalPrice}</h2>
       </div>
 
-      <button className={styles.checkout}>
+      <button className={styles.checkout} onClick={() => handleCheckoutClick()}>
         <BagIcon className={styles.bag} />
         Checkout
       </button>
+      <Link to="/bag">
+        <button className={styles.seeInBag}>See in Bag</button>
+      </Link>
     </div>
   );
 };

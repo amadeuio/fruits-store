@@ -49,10 +49,11 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
           onClick={(e) => handleFavoriteClick(e)}
         />
         <img className={styles.image} src={getImageSrc(name)} alt={name} />
+
         <div className={styles.info}>
-          <h2 className={styles.name}>{name}</h2>
-          <div className={styles.family}>{family} Family</div>
-          <div className={styles.price}>${price}</div>
+          <h3>{name}</h3>
+          <h4 className={styles.family}>{family} Family</h4>
+          <h5 className={styles.price}>${price.toFixed(1)}</h5>
         </div>
         <BagIcon className={styles.bag} isFilled={inBag} onClick={(e) => handleBagClick(e)} />
       </div>
