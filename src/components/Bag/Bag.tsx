@@ -1,8 +1,9 @@
 import styles from "./Bag.module.css";
 import { useAppContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
-import BagIcon from "../../icons/BagIcon";
 import BagFruit from "./BagFruit/BagFruit";
+import ButtonBlue from "../common/ButtonBlue/ButtonBlue";
+import ButtonBack from "../common/ButtonBack/ButtonBack";
 
 const Bag = () => {
   const navigate = useNavigate();
@@ -25,10 +26,9 @@ const Bag = () => {
 
   return (
     <div className={styles.bag}>
+      <ButtonBack className={styles.buttonBack} onClick={handleGoBack} />
+
       <div className={styles.bagTop}>
-        <button className={styles.backButton} onClick={handleGoBack}>
-          back
-        </button>
         <h2>Shopping Bag</h2>
       </div>
 
@@ -41,6 +41,7 @@ const Bag = () => {
 
         <div className={styles.checkoutContainer}>
           <div className={styles.checkout}>
+            <h2>Order Summary</h2>
             <h2 className={styles.priceTitle}>${totalPrice}</h2>
             <div className={styles.subtotal}>
               <div className={styles.subtotalName}>Subtotal (3 items)</div>
@@ -50,15 +51,12 @@ const Bag = () => {
               <div className={styles.vatName}>VAT (20%)</div>
               <div className={styles.vatPrice}>${vatPrice}</div>
             </div>
-            <hr className={styles.horizontalLine} />
+            <hr />
             <div className={styles.total}>
               <h2>Total</h2>
               <h2>${totalPrice}</h2>
             </div>
-            <button className={styles.checkoutButton} onClick={() => handleCheckoutClick()}>
-              <BagIcon className={styles.bagIcon} />
-              Checkout
-            </button>
+            <ButtonBlue className={styles.checkoutButton} onClick={() => handleCheckoutClick()} />
           </div>
         </div>
       </div>

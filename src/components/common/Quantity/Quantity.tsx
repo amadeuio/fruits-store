@@ -5,13 +5,13 @@ import PlusIcon from "../../../icons/PlusIcon";
 const Quantity = () => {
   return (
     <div className={styles.quantity}>
-      <span className={styles.modify}>
+      <div className={styles.modify}>
         <MinusIcon className={styles.modifyIcon} />
-      </span>
-      <span className={styles.number}>1</span>
-      <span className={styles.modify}>
+      </div>
+      <div className={styles.number}>1</div>
+      <div className={styles.modify}>
         <PlusIcon className={styles.modifyIcon} />
-      </span>
+      </div>
     </div>
   );
 };

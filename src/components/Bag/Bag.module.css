@@ -1,60 +1,57 @@
-@import "../../css/global.css";
-
 /* Spacing */
 
 .bag {
   padding: 50px;
+  padding-top: 60px;
+  gap: 30px;
 }
 
-.bagTop {
-  margin-bottom: 30px;
+.bagBottom {
+  gap: 80px;
+}
+
+.fruitsContainer {
+  gap: 30px;
 }
 
 .checkout {
+  gap: 30px;
   width: 400px;
   padding: 50px;
 }
 
-.checkout > *:not(:last-child) {
-  margin-bottom: 30px;
-}
+/* Other styles */
 
-.checkoutContainer {
-  margin-left: 80px;
+.bag {
+  display: flex;
+  flex-direction: column;
 }
-
-/* Spacing */
 
 .bagBottom {
-  font-weight: 500;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  position: relative;
 }
 
 .fruitsContainer {
   flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .checkout {
   border: 1px solid var(--color-300);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
 }
 
 .priceTitle {
   font-size: 24px;
 }
 
-.horizontalLine {
-  border: 1px solid rgb(234, 234, 234);
-}
-
 .subtotal,
 .vat,
 .total {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -64,34 +61,12 @@
   color: var(--color-700);
 }
 
-.checkoutButton {
-  cursor: pointer;
-  border: 0;
-  border-radius: 8px;
-  color: white;
-  font-weight: 600;
-  background-color: var(--color-blue);
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-  transition: background-color 0.3s ease;
+.bag {
+  position: relative;
 }
 
-.checkoutButton:hover {
-  background-color: var(--color-blue-dark);
-}
-
-.bagIcon {
-  transform: translateY(-1px);
-  margin-right: 4px;
-  width: 20px;
-  fill: white;
-}
-
-.backButton {
-  display: none;
+.buttonBack {
   position: absolute;
-  top: 0;
+  top: 0px;
+  left: 45px;
 }

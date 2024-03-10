@@ -53,7 +53,7 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
         <div className={styles.info}>
           <h3>{name}</h3>
           <h4 className={styles.family}>{family} Family</h4>
-          <h5 className={styles.price}>${price.toFixed(1)}</h5>
+          <h3 className={styles.price}>${price.toFixed(1)}</h3>
         </div>
         <BagIcon className={styles.bag} isFilled={inBag} onClick={(e) => handleBagClick(e)} />
       </div>

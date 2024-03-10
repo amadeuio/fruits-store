@@ -1,0 +1,18 @@
+.buttonBlue {
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  background-color: var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 8px;
+  height: 47px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.buttonBlue:hover {
+  background-color: var(--color-blue-dark);
+}

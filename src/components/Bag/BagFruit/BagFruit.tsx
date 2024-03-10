@@ -24,11 +24,10 @@ const BagFruit = ({ fruit }) => {
         <Quantity />
       </div>
 
+      <h3 className={styles.price}>${price.toFixed(1)}</h3>
       <div className={styles.delete}>
         <DeleteIcon className={styles.deleteIcon} />
       </div>
-
-      <h5 className={styles.price}>${price.toFixed(1)}</h5>
     </li>
   );
 };

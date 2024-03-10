@@ -1,9 +1,10 @@
 import styles from "./BagTooltip.module.css";
 import { useAppContext } from "../../../../Context";
 import getImageSrc from "../../../../utils/getImageSrc";
-import BagIcon from "../../../../icons/BagIcon";
 import InStock from "../../../common/InStock/InStock";
 import { Link } from "react-router-dom";
+import ButtonWhite from "../../../common/ButtonWhite/ButtonWhite";
+import ButtonBlue from "../../../common/ButtonBlue/ButtonBlue";
 
 const BagTooltip = () => {
   const { fruits } = useAppContext();
@@ -15,9 +16,9 @@ const BagTooltip = () => {
   const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
   const subtotalPrice: string = fruitsInBag
     .reduce((total: number, fruit) => total + fruit.price, 0)
-    .toFixed(2);
-  const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(2);
-  const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(2);
+    .toFixed(1);
+  const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(1);
+  const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(1);
 
   return (
     <div className={styles.bagTooltip}>
@@ -34,7 +35,7 @@ const BagTooltip = () => {
                 </div>
                 <div className={styles.infoContainer}>
                   <h3 className={styles.name}>{fruit.name}</h3>
-                  <InStock />
+                  <h4>{fruit.family}</h4>
                   <div className={styles.qty}>Qty: 3</div>
                 </div>
               </div>
@@ -57,12 +58,14 @@ const BagTooltip = () => {
         <h2>${totalPrice}</h2>
       </div>
 
-      <button className={styles.checkout} onClick={() => handleCheckoutClick()}>
-        <BagIcon className={styles.bag} />
-        Checkout
-      </button>
+      <ButtonBlue
+        className={styles.checkoutButton}
+        text="Checkout"
+        onClick={() => handleCheckoutClick()}
+      />
+
       <Link to="/bag">
-        <button className={styles.seeInBag}>See in Bag</button>
+        <ButtonWhite text="See in Bag" />
       </Link>
     </div>
   );

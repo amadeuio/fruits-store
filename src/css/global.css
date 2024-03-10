@@ -29,6 +29,11 @@
   --color-blue-dark: #2666dc;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -56,6 +61,11 @@ body {
 svg {
   height: 24px;
   width: 24px;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid rgb(240, 240, 240);
 }
 
 /* Logo */

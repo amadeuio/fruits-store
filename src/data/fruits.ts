@@ -5,8 +5,8 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Tangerine",
-    price: 1.99,
-    colors: ["Orange"],
+    price: 2,
+    colors: ["Orange", "Green"],
     family: "Citrus",
     vitamins: ["Vitamin C"],
     isFavorite: false,
@@ -25,7 +25,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Watermelon",
-    price: 5.99,
+    price: 6,
     colors: ["Red", "Green"],
     family: "Gourd",
     vitamins: ["Vitamin A", "Vitamin C"],
@@ -35,8 +35,8 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Lemon",
-    price: 1.49,
-    colors: ["Yellow"],
+    price: 1.5,
+    colors: ["Yellow", "Green"],
     family: "Citrus",
     vitamins: ["Vitamin C"],
     isFavorite: false,
@@ -55,7 +55,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Pineapple",
-    price: 2.99,
+    price: 3,
     colors: ["Yellow", "Green"],
     family: "Other",
     vitamins: ["Vitamin C", "Vitamin B6"],
@@ -65,7 +65,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Mango",
-    price: 5.0,
+    price: 5,
     colors: ["Yellow", "Red", "Green"],
     family: "Cashew",
     vitamins: ["Vitamin A", "Vitamin C"],
@@ -85,7 +85,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Green Apple",
-    price: 1.29,
+    price: 1.5,
     colors: ["Green"],
     family: "Rose",
     vitamins: ["Vitamin C"],
@@ -95,7 +95,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Pear",
-    price: 2.49,
+    price: 2.5,
     colors: ["Green"],
     family: "Rose",
     vitamins: ["Vitamin C", "Vitamin K"],
@@ -105,8 +105,8 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Peach",
-    price: 3.0,
-    colors: ["Orange"],
+    price: 3,
+    colors: ["Orange", "Green"],
     family: "Rose",
     vitamins: ["Vitamin A", "Vitamin C"],
     isFavorite: false,
@@ -116,8 +116,8 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Cherries",
-    price: 3.99,
-    colors: ["Red"],
+    price: 4,
+    colors: ["Red", "Green"],
     family: "Rose",
     vitamins: ["Vitamin C"],
     isFavorite: false,
@@ -126,7 +126,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Strawberry",
-    price: 2.79,
+    price: 2.8,
     colors: ["Red"],
     family: "Rose",
     vitamins: ["Vitamin C"],
@@ -136,7 +136,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Blueberries",
-    price: 4.49,
+    price: 4.5,
     colors: ["Blue", "Black"],
     family: "Berry",
     vitamins: ["Vitamin C", "Vitamin K"],
@@ -156,7 +156,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Kiwi",
-    price: 1.99,
+    price: 2,
     colors: ["Green", "Brown"],
     family: "Other",
     vitamins: ["Vitamin C", "Vitamin K"],
@@ -166,7 +166,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Tomato",
-    price: 1.49,
+    price: 1.5,
     colors: ["Red"],
     family: "Nightshade",
     vitamins: ["Vitamin A", "Vitamin C"],
@@ -176,7 +176,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Olive",
-    price: 3.99,
+    price: 4,
     colors: ["Green"],
     family: "Other",
     vitamins: ["Vitamin E", "Vitamin K"],
@@ -186,7 +186,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Coconut",
-    price: 2.79,
+    price: 2.8,
     colors: ["Brown"],
     family: "Palm",
     vitamins: ["Vitamin B6"],
@@ -196,7 +196,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Avocado",
-    price: 2.99,
+    price: 3,
     colors: ["Green", "Brown"],
     family: "Laurel",
     vitamins: ["Vitamin K", "Vitamin E"],
@@ -206,7 +206,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Eggplant",
-    price: 1.79,
+    price: 1.8,
     colors: ["Purple"],
     family: "Nightshade",
     vitamins: ["Vitamin K"],
@@ -216,7 +216,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Cucumber",
-    price: 0.99,
+    price: 1,
     colors: ["Green"],
     family: "Gourd",
     vitamins: ["Vitamin K"],
@@ -226,7 +226,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Bell Pepper",
-    price: 1.29,
+    price: 1.3,
     colors: ["Green"],
     family: "Nightshade",
     vitamins: ["Vitamin A", "Vitamin C"],
@@ -236,7 +236,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Hot Pepper",
-    price: 2.49,
+    price: 2.5,
     colors: ["Red"],
     family: "Nightshade",
     vitamins: ["Vitamin C"],
@@ -246,7 +246,7 @@ export const initialFruits: Fruits = [
   {
     id: uuidv4(),
     name: "Pumpkin",
-    price: 2.49,
+    price: 2.5,
     colors: ["Orange"],
     family: "Gourd",
     vitamins: ["Vitamin A"],

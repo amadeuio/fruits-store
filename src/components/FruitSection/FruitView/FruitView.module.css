@@ -1,8 +1,166 @@
 @import "../../../css/global.css";
 
+/* Spacing */
+
 .fruitView {
-  background-color: red;
+  padding: 50px;
+  padding-top: 60px;
+  gap: 40px;
+}
+
+.rightContainer {
+  gap: 10px;
+}
+
+.description {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+/* Other styles */
+
+.fruitView {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightContainer {
+  flex: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  width: 460px;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-100);
+  border-radius: 8px;
+}
+
+.image {
+  height: 100px;
+  width: auto;
+}
+
+.leftContainer {
+  position: relative;
+}
+
+.categories {
+  position: absolute;
+  left: 0px;
+  bottom: -38px;
+  display: flex;
+  gap: 8px;
+}
+
+.vitamin,
+.color {
+  font-size: 10px;
+  font-weight: 500;
+  padding: 5px 12px;
+  border-radius: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-200);
+}
+
+.color {
+  border: none;
+}
+
+.checkoutButton,
+.bagButton {
+  width: 340px;
+}
+
+.fruitView {
+  position: relative;
+}
+
+.buttonBack {
+  position: absolute;
+  top: 0px;
+  left: 45px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.favorite {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+}
+
+.favorite {
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.imageContainer:hover .favorite {
+  opacity: 1;
+}
+
+.favorite:hover {
+  transform: scale(1.2);
+}
+
+.favorite.clicked {
+  fill: var(--color-red);
+  opacity: 1;
+}
+
+/* Checkbox background colors: */
+
+.Purple {
+  background-color: rgb(255, 191, 255);
+}
+
+.Green {
+  background-color: rgb(200, 244, 200);
+}
+
+.Brown {
+  background-color: rgb(234, 189, 189);
+}
+
+.Red {
+  background-color: rgb(255, 179, 179);
+}
+
+.Orange {
+  background-color: rgb(255, 208, 180);
+}
+
+.Yellow {
+  background-color: rgb(255, 245, 150);
+}
+
+.Blue {
+  background-color: rgb(179, 179, 255);
+}
+
+.Black {
+  background-color: rgb(198, 198, 198);
 }
