@@ -84,5 +84,6 @@
 }
 
 .emptyBag {
+  font-size: 16px;
   color: var(--color-400);
 }

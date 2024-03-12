@@ -1,19 +1,19 @@
-@import "../../css/global.css";
-
 .navbar {
-  padding: 20px;
-  padding-left: 40px;
+  padding: 20px 50px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.rightContainer {
+.navbarRight,
+.navbarLeft {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-.rightContainer > * {
-  margin: 0 15px;
+.navbarRight {
+  gap: 30px;
+}
+
+.navbarLeft {
+  gap: 50px;
 }

@@ -2,6 +2,7 @@
 
 .navbarLinks {
   display: flex;
+  transform: translateY(4px);
 }
 
 .link {

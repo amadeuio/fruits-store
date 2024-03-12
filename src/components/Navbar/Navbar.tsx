@@ -8,11 +8,13 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <Link to="/">
-        <h1>fruits.</h1>
-      </Link>
-      <NavbarLinks />
-      <div className={styles.rightContainer}>
+      <div className={styles.navbarLeft}>
+        <Link to="/">
+          <h1>fruits.</h1>
+        </Link>
+        <NavbarLinks />
+      </div>
+      <div className={styles.navbarRight}>
         <NavbarSearch />
         <NavbarFavorite />
         <NavbarBag />

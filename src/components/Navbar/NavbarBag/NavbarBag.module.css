@@ -1,5 +1,3 @@
-@import "../../../css/global.css";
-
 .bagContainer {
   cursor: pointer;
   position: relative;
@@ -11,9 +9,8 @@
 }
 
 .number {
-  z-index: -1;
+  pointer-events: none;
   font-weight: 700;
-  cursor: default;
   position: absolute;
   top: 14.5px;
   left: 12.5px;

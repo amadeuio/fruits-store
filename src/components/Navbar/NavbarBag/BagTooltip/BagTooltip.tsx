@@ -1,7 +1,6 @@
 import styles from "./BagTooltip.module.css";
 import { useAppContext } from "../../../../Context";
 import getImageSrc from "../../../../utils/getImageSrc";
-import InStock from "../../../common/InStock/InStock";
 import { Link } from "react-router-dom";
 import ButtonWhite from "../../../common/ButtonWhite/ButtonWhite";
 import ButtonBlue from "../../../common/ButtonBlue/ButtonBlue";
@@ -45,7 +44,7 @@ const BagTooltip = () => {
           ))}
         </ul>
       ) : (
-        <span className={styles.emptyBag}>Bag is empty.</span>
+        <p className={styles.emptyBag}>Bag is empty.</p>
       )}
 
       <hr className={styles.horizontalLine} />
