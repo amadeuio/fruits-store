@@ -1,15 +1,20 @@
 .title {
   cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin: 10px 0px;
+  margin: 15px 0;
+}
+
+.list {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .list {
   height: 0px;
-  overflow: hidden;
-  transition: height 0.3s ease;
 }
 
 .list.expanded {
@@ -22,11 +27,7 @@
   cursor: pointer;
   padding: 10px;
   border-radius: 10px;
-  transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.listItem:not(:last-child) {
-  margin-bottom: 4px;
+  transition: background-color 0.2s ease;
 }
 
 .listItem:hover {

@@ -24,7 +24,7 @@ const SidebarVitamins = () => {
   const checkedCount = vitamins.filter((vitamin) => vitamin.isChecked).length;
 
   return (
-    <div className={styles.SidebarVitamins}>
+    <div className={styles.sidebarVitamins}>
       <div className={styles.title} onClick={toggleNavbar}>
         <h2>Vitamins {checkedCount ? `(${checkedCount})` : ""}</h2>
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />

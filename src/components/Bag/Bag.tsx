@@ -10,7 +10,7 @@ const Bag = () => {
   const { fruits } = useAppContext();
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate("/store");
   };
 
   const handleCheckoutClick = () => {

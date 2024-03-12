@@ -41,7 +41,7 @@ const FruitView = () => {
   };
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate("/store");
   };
 
   const handleBuyNow = () => {

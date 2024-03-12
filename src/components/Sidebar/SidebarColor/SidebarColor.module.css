@@ -1,42 +1,41 @@
 .title {
   cursor: pointer;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 0px;
-  transition: height 0.3s ease;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 80px);
   overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.grid {
+  height: 0px;
 }
 
 .grid.expanded {
-  height: 255px;
+  height: 240px;
 }
 
 .gridItem {
   font-weight: 400;
   font-size: 14px;
-  padding: 20px 0;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 5px;
   cursor: pointer;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .gridItem.clicked {
   animation: clickEffect 0.5s ease;
-}
-
-.gridItem:hover .itemName {
-  color: var(--color-500);
 }
 
 .gridItem:hover {
@@ -61,10 +60,9 @@
 .itemName {
   color: var(--color-800);
   font-size: 12px;
-  margin-top: 5px;
 }
 
-/* Checkbox background colors: */
+/* Checkbox background colors */
 
 .Purple {
   background-color: rgb(214, 117, 214);

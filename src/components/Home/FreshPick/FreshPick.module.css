@@ -1,0 +1,24 @@
+.freshPick {
+  background-color: var(--color-100);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+}
+
+.image {
+  height: 60px;
+  width: 60px;
+}
+
+.freshPick {
+  position: relative;
+}
+
+.info {
+  position: absolute;
+  --spacing: 17px;
+  bottom: var(--spacing);
+  left: var(--spacing);
+}

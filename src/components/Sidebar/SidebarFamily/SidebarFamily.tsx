@@ -26,7 +26,7 @@ const SidebarFamily = () => {
   const checkedCount = families.filter((family) => family.isChecked).length;
 
   return (
-    <div className={styles.SidebarFamily}>
+    <div className={styles.sidebarFamily}>
       <div className={styles.title} onClick={toggleNavbar}>
         <h2>Family {checkedCount ? `(${checkedCount})` : ""}</h2>
         <ExpandIcon className={styles.expandIcon} isExpanded={isExpanded} />
