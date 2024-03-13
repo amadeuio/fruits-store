@@ -2,10 +2,16 @@ import styles from "./BagFruit.module.css";
 import getImageSrc from "../../../utils/getImageSrc";
 import DeleteIcon from "../../../icons/DeleteIcon";
 import InStock from "../../common/InStock/InStock";
-import Quantity from "../../common/Quantity/Quantity";
+import EditQuantity from "../../common/EditQuantity/EditQuantity";
+import { useAppContext } from "../../../Context";
 
 const BagFruit = ({ fruit }) => {
-  const { name, family, price } = fruit;
+  const { setFruits } = useAppContext();
+  const { id, name, family, price, quantity } = fruit;
+
+  const handleDelete = () => {
+    setFruits((prevFruits) => prevFruits.map((f) => (f.id === id ? { ...f, inBag: false } : f)));
+  };
 
   return (
     <li className={styles.bagFruit}>
@@ -18,15 +24,18 @@ const BagFruit = ({ fruit }) => {
           <h3>{name}</h3>
           <h4>{family} Family</h4>
           <InStock />
-          <div className={styles.qty}>Qty: 3</div>
+          <div className={styles.qty}>Qty: {quantity}</div>
         </div>
 
-        <Quantity />
+        <EditQuantity fruit={fruit} />
       </div>
 
-      <h3 className={styles.price}>${price.toFixed(1)}</h3>
-      <div className={styles.delete}>
-        <DeleteIcon className={styles.deleteIcon} />
+      <div className={styles.rightContainer}>
+        <div className={styles.delete} onClick={handleDelete}>
+          <DeleteIcon className={styles.deleteIcon} />
+        </div>
+
+        <h5 className={styles.price}>${(price * quantity).toFixed(1)}</h5>
       </div>
     </li>
   );

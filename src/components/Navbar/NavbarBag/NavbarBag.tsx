@@ -21,14 +21,14 @@ const NavbarBag = () => {
   };
 
   const isBagOpen = location.pathname === "/bag";
-  const bagCount = fruits.filter((fruit) => fruit.inBag).length;
+  const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
 
   return (
     <div className={styles.navbarBag}>
       <Link to="bag">
         <div data-tooltip-id="bag-tooltip" className={styles.bagContainer} onClick={handleBagClick}>
           <BagIcon className={styles.bagIcon} isFilled={isBagOpen} />
-          <div className={styles.number}>{bagCount}</div>
+          <div className={styles.number}>{fruitsInBag.length}</div>
         </div>
       </Link>
       {!isBagOpen && (
@@ -39,7 +39,7 @@ const NavbarBag = () => {
           place="bottom-end"
           opacity={1}
           border="1px solid var(--color-200)">
-          <BagTooltip />
+          <BagTooltip fruitsInBag={fruitsInBag} />
         </Tooltip>
       )}
     </div>

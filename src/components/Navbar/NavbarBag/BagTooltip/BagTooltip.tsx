@@ -1,20 +1,35 @@
 import styles from "./BagTooltip.module.css";
-import { useAppContext } from "../../../../Context";
 import getImageSrc from "../../../../utils/getImageSrc";
 import { Link } from "react-router-dom";
 import ButtonWhite from "../../../common/ButtonWhite/ButtonWhite";
 import ButtonBlue from "../../../common/ButtonBlue/ButtonBlue";
+import { Fruits } from "../../../../data/types";
+import DeleteIcon from "../../../../icons/DeleteIcon";
+import { useAppContext } from "../../../../Context";
 
-const BagTooltip = () => {
-  const { fruits } = useAppContext();
+interface BagTooltipProps {
+  fruitsInBag: Fruits;
+}
+
+const BagTooltip = ({ fruitsInBag }: BagTooltipProps) => {
+  const { setFruits } = useAppContext();
 
   const handleCheckoutClick = () => {
-    alert("This is not an actual store. 😁");
+    if (fruitsInBag.length > 0) {
+      alert(
+        "Congratulations! You would have made a successful purchase if this was a real store 😁"
+      );
+    } else {
+      alert("Cannot proceed with checkout. Your bag is empty.");
+    }
   };
 
-  const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
+  const handleDelete = (id) => {
+    setFruits((prevFruits) => prevFruits.map((f) => (f.id === id ? { ...f, inBag: false } : f)));
+  };
+
   const subtotalPrice: string = fruitsInBag
-    .reduce((total: number, fruit) => total + fruit.price, 0)
+    .reduce((total: number, fruit) => total + fruit.price * fruit.quantity, 0)
     .toFixed(1);
   const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(1);
   const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(1);
@@ -24,9 +39,9 @@ const BagTooltip = () => {
       <h2 className={styles.title}>Shopping Bag</h2>
       <hr className={styles.horizontalLine} />
 
-      {fruitsInBag.length ? (
-        <ul>
-          {fruitsInBag.map((fruit) => (
+      <ul className={styles.fruitsList}>
+        {fruitsInBag.length > 0 ? (
+          fruitsInBag.map((fruit) => (
             <li className={styles.fruit} key={fruit.id}>
               <div className={styles.leftContainer}>
                 <div className={styles.imageContainer}>
@@ -35,17 +50,21 @@ const BagTooltip = () => {
                 <div className={styles.infoContainer}>
                   <h3 className={styles.name}>{fruit.name}</h3>
                   <h4>{fruit.family}</h4>
-                  <div className={styles.qty}>Qty: 3</div>
+                  <div className={styles.qty}>Qty: {fruit.quantity}</div>
                 </div>
               </div>
-
-              <h5>${fruit.price}</h5>
+              <div className={styles.rightContainer}>
+                <div className={styles.delete} onClick={() => handleDelete(fruit.id)}>
+                  <DeleteIcon className={styles.deleteIcon} />
+                </div>
+                <h5 className={styles.price}>${(fruit.price * fruit.quantity).toFixed(1)}</h5>
+              </div>
             </li>
-          ))}
-        </ul>
-      ) : (
-        <p className={styles.emptyBag}>Bag is empty.</p>
-      )}
+          ))
+        ) : (
+          <li className={styles.emptyBag}>Bag is empty.</li>
+        )}
+      </ul>
 
       <hr className={styles.horizontalLine} />
 
@@ -57,15 +76,16 @@ const BagTooltip = () => {
         <h2>${totalPrice}</h2>
       </div>
 
-      <ButtonBlue
-        className={styles.checkoutButton}
-        text="Checkout"
-        onClick={() => handleCheckoutClick()}
-      />
-
-      <Link to="/bag">
-        <ButtonWhite text="See in Bag" />
-      </Link>
+      <div className={styles.buttonsContainer}>
+        <ButtonBlue
+          className={styles.checkoutButton}
+          text="Checkout"
+          onClick={() => handleCheckoutClick()}
+        />
+        <Link to="/bag">
+          <ButtonWhite text="See in Bag" />
+        </Link>
+      </div>
     </div>
   );
 };

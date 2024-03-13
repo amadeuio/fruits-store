@@ -13,22 +13,24 @@
   padding: 55px;
 }
 
-.price {
-  margin-right: 70px;
-}
-
-/* Spacing */
+/* Other styles */
 
 .bagFruit {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
 }
 
 .leftContainer {
   display: flex;
   align-items: center;
+}
+
+.rightContainer {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .image {
@@ -59,9 +61,6 @@
 }
 
 .delete {
-  position: absolute;
-  top: 0px;
-  right: 0px;
   cursor: pointer;
   width: 24px;
   height: 24px;

@@ -34,6 +34,7 @@ export interface Fruit {
   id: UUID;
   name: string;
   price: number;
+  quantity: number;
   colors: Color[];
   family: Family;
   vitamins: Vitamin[];
@@ -50,3 +51,7 @@ export interface Filters {
   favorite: boolean;
   query: string;
 }
+
+export type FruitDescriptions = {
+  [key: string]: string;
+};

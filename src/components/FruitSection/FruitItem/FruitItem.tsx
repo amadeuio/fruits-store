@@ -5,6 +5,7 @@ import FavoriteIcon from "../../../icons/FavoriteIcon";
 import BagIcon from "../../../icons/BagIcon";
 import getImageSrc from "../../../utils/getImageSrc";
 import { Link } from "react-router-dom";
+import { Flipped } from "react-flip-toolkit";
 
 interface FruitItemProps {
   fruit: Fruit;
@@ -42,21 +43,23 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
 
   return (
     <Link to={name}>
-      <div className={styles.fruitItem}>
-        <FavoriteIcon
-          className={`${styles.favorite} ${isFavorite ? styles.clicked : ""}`}
-          isFilled={isFavorite}
-          onClick={(e) => handleFavoriteClick(e)}
-        />
-        <img className={styles.image} src={getImageSrc(name)} alt={name} />
+      <Flipped key={id} flipId={id}>
+        <div className={styles.fruitItem}>
+          <FavoriteIcon
+            className={`${styles.favorite} ${isFavorite ? styles.clicked : ""}`}
+            isFilled={isFavorite}
+            onClick={(e) => handleFavoriteClick(e)}
+          />
+          <img className={styles.image} src={getImageSrc(name)} alt={name} />
 
-        <div className={styles.info}>
-          <h3>{name}</h3>
-          <h4 className={styles.family}>{family} Family</h4>
-          <h3 className={styles.price}>${price.toFixed(1)}</h3>
+          <div className={styles.info}>
+            <h3>{name}</h3>
+            <h4 className={styles.family}>{family} Family</h4>
+            <h5 className={styles.price}>${price.toFixed(1)}</h5>
+          </div>
+          <BagIcon className={styles.bag} isFilled={inBag} onClick={(e) => handleBagClick(e)} />
         </div>
-        <BagIcon className={styles.bag} isFilled={inBag} onClick={(e) => handleBagClick(e)} />
-      </div>
+      </Flipped>
     </Link>
   );
 };

@@ -2,39 +2,48 @@
 
 .bagTooltip {
   width: 380px;
-  --spacing: 30px;
   padding: 20px;
 }
 
 .horizontalLine {
-  margin: var(--spacing) 0px;
+  margin: 30px 0px;
 }
 
-.fruit:not(:last-child) {
-  margin-bottom: 20px;
+.fruitsList {
+  gap: 20px;
 }
 
-.infoContainer > *:not(:last-child) {
-  margin-bottom: 6px;
+.infoContainer {
+  gap: 6px;
+}
+
+.leftContainer {
+  gap: 20px;
 }
 
 .imageContainer {
-  margin-right: 20px;
   padding: 25px;
 }
 
 .total {
-  margin-bottom: var(--spacing);
+  margin-bottom: 30px;
 }
 
 .checkoutButton {
   margin-bottom: 10px;
 }
 
-/* Spacing */
+/* Other styles */
 
-.horizontalLine {
-  border: 1px solid rgb(234, 234, 234);
+.fruitsList {
+  display: flex;
+  flex-direction: column;
+}
+
+.fruit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .leftContainer {
@@ -42,10 +51,20 @@
   align-items: center;
 }
 
-.fruit {
+.rightContainer {
+  width: 90px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+}
+
+.horizontalLine {
+  border: 1px solid rgb(234, 234, 234);
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
 }
 
 .imageContainer {
@@ -78,9 +97,30 @@
 .inclVat {
   transform: translateY(1px);
   margin-left: 8px;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 16px;
   color: var(--color-400);
+}
+
+.delete {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border: solid 1px var(--color-200);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.delete:hover {
+  background-color: var(--color-200);
+}
+
+.deleteIcon {
+  height: 14px;
+  width: 14px;
+  fill: var(--color-red);
 }
 
 .emptyBag {

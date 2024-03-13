@@ -1,4 +1,4 @@
-.quantity {
+.editQuantity {
   display: flex;
   align-items: center;
 }
@@ -8,7 +8,7 @@
   margin: 0 14px;
 }
 
-.modify {
+.editButton {
   cursor: pointer;
   width: 24px;
   height: 24px;
@@ -20,11 +20,11 @@
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.modify:hover {
+.editButton:hover {
   background-color: var(--color-200);
 }
 
-.modifyIcon {
+.icon {
   height: 14px;
   width: 14px;
   fill: var(--color-400);

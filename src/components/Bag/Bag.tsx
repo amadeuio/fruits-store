@@ -10,16 +10,22 @@ const Bag = () => {
   const { fruits } = useAppContext();
 
   const handleGoBack = () => {
-    navigate("/store");
+    navigate(-1);
   };
 
   const handleCheckoutClick = () => {
-    alert("This is not an actual store. 😁");
+    if (fruitsInBag.length > 0) {
+      alert(
+        "Congratulations! You would have made a successful purchase if this was a real store 😁"
+      );
+    } else {
+      alert("Cannot proceed with checkout. Your bag is empty.");
+    }
   };
 
   const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
   const subtotalPrice: string = fruitsInBag
-    .reduce((total: number, fruit) => total + fruit.price, 0)
+    .reduce((total: number, fruit) => total + fruit.price * fruit.quantity, 0)
     .toFixed(1);
   const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(1);
   const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(1);
@@ -34,9 +40,11 @@ const Bag = () => {
 
       <div className={styles.bagBottom}>
         <ul className={styles.fruitsContainer}>
-          {fruitsInBag.map((fruit) => (
-            <BagFruit key={fruit.id} fruit={fruit} />
-          ))}
+          {fruitsInBag.length > 0 ? (
+            fruitsInBag.map((fruit) => <BagFruit key={fruit.id} fruit={fruit} />)
+          ) : (
+            <li className={styles.emptyBag}>Bag is empty.</li>
+          )}
         </ul>
 
         <div className={styles.checkoutContainer}>
