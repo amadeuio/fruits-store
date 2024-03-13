@@ -1,29 +1,26 @@
-import styles from "./Home.module.css";
+import HomeCarousel from "./HomeCarousel/HomeCarousel";
+
 import { Link } from "react-router-dom";
-import FreshPick from "./FreshPick/FreshPick";
-import { useAppContext } from "../../Context";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from "./Home.module.css";
 
 const Home = () => {
-  const { fruits } = useAppContext();
-
-  const selectedFruits = ["Banana", "Mango", "Blueberries"];
-  const freshPicks = fruits.filter((fruit) => selectedFruits.includes(fruit.name));
-
   return (
     <div className={styles.home}>
-      <h1>Welcome to fruits.</h1>
-      <p className={styles.mainParagraph}>
-        Where Flavor Meets Health - We believe in the power of fruits to tantalize our taste buds,
-        nourish our bodies, and empower us to live our best lives
+      <h1 className={styles.title}>Welcome to fruits.</h1>
+
+      <p className={styles.description}>
+        Discover a collection of nature's finest with our vibrant selection of farm-fresh fruits,
+        bursting with flavor and vitality.
       </p>
+
       <Link to="/store">
-        <button className={styles.storeButton}>Go To Store</button>
+        <button className={styles.storeButton}>Shop Now</button>
       </Link>
-      <div className={styles.freshPicks}>
-        {freshPicks.map((fruit) => (
-          <FreshPick key={fruit.id} fruit={fruit} />
-        ))}
-      </div>
+
+      <HomeCarousel />
     </div>
   );
 };

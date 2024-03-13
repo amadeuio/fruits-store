@@ -19,17 +19,15 @@
   flex-direction: column;
 }
 
-.mainParagraph {
+.title {
+  text-align: center;
+}
+
+.description {
   line-height: 1.3;
   font-size: 18px;
   max-width: 800px;
   text-align: center;
-}
-
-.freshPicks {
-  display: flex;
-  border: 0px solid var(--color-300);
-  border-radius: 8px;
 }
 
 .storeButton {

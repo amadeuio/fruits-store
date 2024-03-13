@@ -1,10 +1,11 @@
-.freshPick {
+.carouselFruit {
   background-color: var(--color-100);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 70px;
+  width: 220px;
+  height: 220px;
 }
 
 .image {
@@ -12,7 +13,7 @@
   width: 60px;
 }
 
-.freshPick {
+.carouselFruit {
   position: relative;
 }
 
@@ -21,4 +22,26 @@
   --spacing: 17px;
   bottom: var(--spacing);
   left: var(--spacing);
+}
+
+/* Carousel */
+
+.homeCarousel {
+  width: 700px;
+}
+
+.carouselItem {
+  height: 240px;
+}
+
+@media (max-width: 1024px) {
+  .homeCarousel {
+    width: 466px;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeCarousel {
+    width: 220px;
+  }
 }
