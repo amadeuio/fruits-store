@@ -29,7 +29,7 @@ const BagTooltip = ({ fruitsInBag }: BagTooltipProps) => {
   };
 
   const subtotalPrice: string = fruitsInBag
-    .reduce((total: number, fruit) => total + fruit.price * fruit.quantity, 0)
+    .reduce((total, fruit) => total + fruit.price * fruit.quantity, 0)
     .toFixed(1);
   const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(1);
   const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(1);
@@ -37,6 +37,7 @@ const BagTooltip = ({ fruitsInBag }: BagTooltipProps) => {
   return (
     <div className={styles.bagTooltip}>
       <h2 className={styles.title}>Shopping Bag</h2>
+
       <hr className={styles.horizontalLine} />
 
       <ul className={styles.fruitsList}>

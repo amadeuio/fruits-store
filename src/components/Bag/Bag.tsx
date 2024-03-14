@@ -9,6 +9,13 @@ const Bag = () => {
   const navigate = useNavigate();
   const { fruits } = useAppContext();
 
+  const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
+  const subtotalPrice: string = fruitsInBag
+    .reduce((total: number, fruit) => total + fruit.price * fruit.quantity, 0)
+    .toFixed(1);
+  const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(1);
+  const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(1);
+
   const handleGoBack = () => {
     navigate(-1);
   };
@@ -22,13 +29,6 @@ const Bag = () => {
       alert("Cannot proceed with checkout. Your bag is empty.");
     }
   };
-
-  const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
-  const subtotalPrice: string = fruitsInBag
-    .reduce((total: number, fruit) => total + fruit.price * fruit.quantity, 0)
-    .toFixed(1);
-  const vatPrice: string = (parseFloat(subtotalPrice) * 0.2).toFixed(1);
-  const totalPrice: string = (parseFloat(subtotalPrice) + parseFloat(vatPrice)).toFixed(1);
 
   return (
     <div className={styles.bag}>

@@ -17,11 +17,6 @@
   --color-blue-dark: #2666dc;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
 html {
   box-sizing: border-box;
 }
