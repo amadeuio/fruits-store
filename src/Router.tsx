@@ -29,7 +29,7 @@ const Router = () => {
           element: <Store />,
         },
         {
-          path: "/store/:name",
+          path: "/store/:pathName",
           element: <FruitView />,
         },
         {

@@ -5,7 +5,7 @@ import CloseIcon from "../../../icons/CloseIcon";
 
 const ActiveFilters = () => {
   const { filters, setFilters } = useAppContext();
-  const { colors, families, vitamins } = filters;
+  const { colors, families, vitamins, query } = filters;
 
   const handleCloseClick = (filterName) => {
     const updatedFilters = {
@@ -24,9 +24,13 @@ const ActiveFilters = () => {
     setFilters(updatedFilters);
   };
 
+  const handleCloseQuery = () => {
+    setFilters({ ...filters, query: "" });
+  };
+
   const checkedFilters = getCheckedFilters(filters);
 
-  if (!checkedFilters.length) return null;
+  if (!checkedFilters.length && !query) return null;
 
   return (
     <div className={styles.activeFilters}>
@@ -38,6 +42,15 @@ const ActiveFilters = () => {
           </div>
         </div>
       ))}
+
+      {query && (
+        <div className={styles.activeFilter}>
+          "{query}"
+          <div className={styles.closeButton} onClick={() => handleCloseQuery()}>
+            <CloseIcon className={styles.closeIcon} />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

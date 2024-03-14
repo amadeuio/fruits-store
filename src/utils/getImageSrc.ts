@@ -1,6 +1,4 @@
-function titleToHyphenated(inputString: string): string {
-  return inputString.toLowerCase().replace(/\s+/g, "-");
-}
+import toKebabCase from "./toKebabCase";
 
 // Finds the src of a fruit image with it's Title Case name
 function getImageSrc(name: string): string {
@@ -12,8 +10,8 @@ function getImageSrc(name: string): string {
     return "/images/jack-o-lantern.png";
   }
 
-  const hypenatedName = titleToHyphenated(name);
-  const imageSrc = `/images/${hypenatedName}.png`;
+  const kebabCaseName = toKebabCase(name);
+  const imageSrc = `/images/${kebabCaseName}.png`;
 
   return imageSrc;
 }

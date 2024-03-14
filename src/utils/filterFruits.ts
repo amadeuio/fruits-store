@@ -10,7 +10,7 @@ function matchesQuery(fruit, query) {
 
   if (cleanQuery) {
     const matchString = (str) => cleanString(str).includes(cleanQuery);
-    const matchVitamins = (arr) => arr.some((vitamin) => matchString(vitamin));
+    const matchVitamins = (arr) => arr.some((vitamin) => matchString("vitamin" + vitamin));
     const matchColors = (arr) => arr.some((color) => matchString(color + "color"));
 
     const anyMatch =

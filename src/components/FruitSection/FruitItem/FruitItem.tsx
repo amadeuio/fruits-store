@@ -6,6 +6,7 @@ import BagIcon from "../../../icons/BagIcon";
 import getImageSrc from "../../../utils/getImageSrc";
 import { Link } from "react-router-dom";
 import { Flipped } from "react-flip-toolkit";
+import toKebabCase from "../../../utils/toKebabCase";
 
 interface FruitItemProps {
   fruit: Fruit;
@@ -42,7 +43,7 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
   };
 
   return (
-    <Link to={name}>
+    <Link to={toKebabCase(name)}>
       <Flipped key={id} flipId={id}>
         <div className={styles.fruitItem}>
           <FavoriteIcon

@@ -10,12 +10,14 @@ import ButtonBack from "../../common/ButtonBack/ButtonBack";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
 import EditQuantity from "../../common/EditQuantity/EditQuantity";
 import { fruitDescriptions } from "../../../data/fruitDescriptions";
+import toTitleCase from "../../../utils/toTitleCase";
 
 const FruitView = () => {
   const navigate = useNavigate();
   const { fruits, setFruits } = useAppContext();
-  const { name } = useParams<{ name: string }>();
+  const { pathName } = useParams<{ pathName: string }>();
 
+  const name = toTitleCase(pathName);
   const fruit = fruits.find((fruit) => fruit.name === name);
   const { id, price, quantity, family, colors, vitamins, isFavorite, inBag } = fruit;
   const description = fruitDescriptions[name];
@@ -62,7 +64,7 @@ const FruitView = () => {
 
           {vitamins.map((vitamin) => (
             <div key={vitamin} className={styles.vitamin}>
-              {vitamin}
+              Vitamin {vitamin}
             </div>
           ))}
         </div>
