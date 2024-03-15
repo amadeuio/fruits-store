@@ -1,17 +1,14 @@
-import toKebabCase from "./toKebabCase";
-
-// Finds the src of a fruit image with it's Title Case name
-function getImageSrc(name: string): string {
-  if (name === "Kiwi") {
+// Finds the src of a fruit image with it's slug
+function getImageSrc(slug: string): string {
+  if (slug === "kiwi") {
     return "/images/kiwi-fruit.png";
   }
 
-  if (name === "Pumpkin") {
+  if (slug === "pumpkin") {
     return "/images/jack-o-lantern.png";
   }
 
-  const kebabCaseName = toKebabCase(name);
-  const imageSrc = `/images/${kebabCaseName}.png`;
+  const imageSrc = `/images/${slug}.png`;
 
   return imageSrc;
 }

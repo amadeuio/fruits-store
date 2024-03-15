@@ -6,7 +6,6 @@ import BagIcon from "../../../icons/BagIcon";
 import getImageSrc from "../../../utils/getImageSrc";
 import { Link } from "react-router-dom";
 import { Flipped } from "react-flip-toolkit";
-import toKebabCase from "../../../utils/toKebabCase";
 
 interface FruitItemProps {
   fruit: Fruit;
@@ -14,7 +13,7 @@ interface FruitItemProps {
 
 const FruitItem = ({ fruit }: FruitItemProps) => {
   const { fruits, setFruits } = useAppContext();
-  const { id, name, price, family, isFavorite, inBag } = fruit;
+  const { id, name, slug, price, family, isFavorite, inBag } = fruit;
 
   const handleFavoriteClick = (e) => {
     e.preventDefault();
@@ -43,7 +42,7 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
   };
 
   return (
-    <Link to={toKebabCase(name)}>
+    <Link to={slug}>
       <Flipped key={id} flipId={id}>
         <div className={styles.fruitItem}>
           <FavoriteIcon
@@ -51,7 +50,7 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
             isFilled={isFavorite}
             onClick={(e) => handleFavoriteClick(e)}
           />
-          <img className={styles.image} src={getImageSrc(name)} alt={name} />
+          <img className={styles.image} src={getImageSrc(slug)} alt={name} />
 
           <div className={styles.info}>
             <h3>{name}</h3>

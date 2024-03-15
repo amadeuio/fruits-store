@@ -13,7 +13,7 @@ export type Family =
   | "Laurel"
   | "Other";
 
-export type Vitamin = "C" | "A" | "K" | "E" | "B6";
+export type Vitamin = "Vitamin C" | "Vitamin A" | "Vitamin K" | "Vitamin E" | "Vitamin B6";
 
 export interface ColorObject {
   name: Color;
@@ -33,6 +33,7 @@ export interface VitaminObject {
 export interface Fruit {
   id: UUID;
   name: string;
+  slug: string;
   price: number;
   quantity: number;
   colors: Color[];

@@ -38,7 +38,7 @@ const SidebarVitamins = () => {
             <span className={`${styles.checkbox} ${vitamin.isChecked ? styles.checked : ""}`}>
               {vitamin.isChecked && <CheckIcon className={styles.checkIcon} />}
             </span>
-            <span className={styles.itemName}>Vitamin {vitamin.name}</span>
+            <span className={styles.itemName}>{vitamin.name}</span>
           </div>
         ))}
       </div>

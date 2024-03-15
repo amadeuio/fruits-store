@@ -7,7 +7,7 @@ import { useAppContext } from "../../../Context";
 
 const BagFruit = ({ fruit }) => {
   const { setFruits } = useAppContext();
-  const { id, name, family, price, quantity } = fruit;
+  const { id, name, slug, family, price, quantity } = fruit;
 
   const handleDelete = () => {
     setFruits((prevFruits) => prevFruits.map((f) => (f.id === id ? { ...f, inBag: false } : f)));
@@ -17,7 +17,7 @@ const BagFruit = ({ fruit }) => {
     <li className={styles.bagFruit}>
       <div className={styles.leftContainer}>
         <div className={styles.imageContainer}>
-          <img className={styles.image} src={getImageSrc(name)} alt={name} />
+          <img className={styles.image} src={getImageSrc(slug)} alt={name} />
         </div>
 
         <div className={styles.infoContainer}>

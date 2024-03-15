@@ -46,7 +46,7 @@ const BagTooltip = ({ fruitsInBag }: BagTooltipProps) => {
             <li className={styles.fruit} key={fruit.id}>
               <div className={styles.leftContainer}>
                 <div className={styles.imageContainer}>
-                  <img className={styles.image} src={getImageSrc(fruit.name)} alt={fruit.name} />
+                  <img className={styles.image} src={getImageSrc(fruit.slug)} alt={fruit.name} />
                 </div>
                 <div className={styles.infoContainer}>
                   <h3 className={styles.name}>{fruit.name}</h3>

@@ -10,12 +10,12 @@ interface CarouselFruitProps {
 }
 
 const CarouselFruit = ({ fruit }: CarouselFruitProps) => {
-  const { name } = fruit;
+  const { name, slug } = fruit;
 
   return (
-    <Link to={`store/${name}`}>
+    <Link to={`/store/${slug}`}>
       <div className={styles.carouselFruit}>
-        <img className={styles.image} src={getImageSrc(name)} alt={name} />
+        <img className={styles.image} src={getImageSrc(slug)} alt={name} />
         <div className={styles.info}>
           <h3>{name}</h3>
         </div>

@@ -10,16 +10,14 @@ import ButtonBack from "../../common/ButtonBack/ButtonBack";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
 import EditQuantity from "../../common/EditQuantity/EditQuantity";
 import { fruitDescriptions } from "../../../data/fruitDescriptions";
-import toTitleCase from "../../../utils/toTitleCase";
 
 const FruitView = () => {
   const navigate = useNavigate();
   const { fruits, setFruits } = useAppContext();
-  const { pathName } = useParams<{ pathName: string }>();
+  const { slug } = useParams<{ slug: string }>();
 
-  const name = toTitleCase(pathName);
-  const fruit = fruits.find((fruit) => fruit.name === name);
-  const { id, price, quantity, family, colors, vitamins, isFavorite, inBag } = fruit;
+  const fruit = fruits.find((fruit) => fruit.slug === slug);
+  const { id, name, price, quantity, family, colors, vitamins, isFavorite, inBag } = fruit;
   const description = fruitDescriptions[name];
 
   const handleFavoriteClick = () => {
@@ -53,7 +51,7 @@ const FruitView = () => {
             isFilled={isFavorite}
             onClick={() => handleFavoriteClick()}
           />
-          <img className={styles.image} src={getImageSrc(name)} alt={name} />
+          <img className={styles.image} src={getImageSrc(slug)} alt={name} />
         </div>
         <div className={styles.categories}>
           {colors.map((color) => (
@@ -64,7 +62,7 @@ const FruitView = () => {
 
           {vitamins.map((vitamin) => (
             <div key={vitamin} className={styles.vitamin}>
-              Vitamin {vitamin}
+              {vitamin}
             </div>
           ))}
         </div>
