@@ -2,14 +2,22 @@ import { Filters, Fruits } from "../data/types";
 
 // Returns true if the fruit matches the query, otherwise false
 function matchesQuery(fruit, query) {
-  const cleanString = (str) => {
-    return str.replace(/\s/g, "").toLowerCase();
+  const getCleanQuery = (str) => {
+    // Remove symbols, spaces & uppercases
+    const cleanedString = str.replace(/[^\w\s]/gi, "").replace(/\s+/g, "");
+    return cleanedString.toLowerCase();
   };
 
-  const cleanQuery = cleanString(query);
+  const getCleanStr = (str) => {
+    return str.toLowerCase();
+  };
 
+  const cleanQuery = getCleanQuery(query);
+
+  // If there's a query, perform checks
   if (cleanQuery) {
-    const matchString = (str) => cleanString(str).includes(cleanQuery);
+    const matchString = (str) => getCleanStr(str).includes(cleanQuery);
+
     const matchVitamins = (arr) => arr.some((vitamin) => matchString("vitamin" + vitamin));
     const matchColors = (arr) => arr.some((color) => matchString(color + "color"));
 
