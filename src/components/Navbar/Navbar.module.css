@@ -17,3 +17,13 @@
 .navbarLeft {
   gap: 50px;
 }
+
+@media screen and (max-width: 940px) {
+  .logo {
+    display: none;
+  }
+
+  .navbarLeft {
+    margin-left: 40px;
+  }
+}

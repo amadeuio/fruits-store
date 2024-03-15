@@ -17,9 +17,24 @@
   --color-blue-dark: #2666dc;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: var(--color-400);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-500);
+}
+
 html {
   box-sizing: border-box;
+  overflow: auto;
 }
+
 *,
 *:before,
 *:after {

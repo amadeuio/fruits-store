@@ -19,7 +19,7 @@ const NavbarLinks = () => {
         </Link>
       </li>
       <li className={styles.link} onClick={handleStoreClick}>
-        <Link to="store">
+        <Link to="/store">
           <h3>Store</h3>
         </Link>
       </li>

@@ -14,7 +14,7 @@ const NavbarFavorite = () => {
   const favoriteCount = fruits.filter((fruit) => fruit.isFavorite).length;
 
   return (
-    <Link to="store">
+    <Link to="/store">
       <div className={styles.navbarFavorite}>
         <FavoriteIcon
           className={`${styles.favorite} ${favorite ? styles.clicked : ""}`}

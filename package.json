@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/uuid": "^9.0.8",
     "react": "^18.2.0",
+    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-flip-toolkit": "^7.1.0",
     "react-router-dom": "^6.22.2",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
+    "@types/react-burger-menu": "^2.8.7",
     "@types/react-dom": "^18.2.19",
     "@types/react-slick": "^0.23.13",
     "@typescript-eslint/eslint-plugin": "^7.0.2",

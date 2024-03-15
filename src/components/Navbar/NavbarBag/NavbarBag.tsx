@@ -25,7 +25,7 @@ const NavbarBag = () => {
 
   return (
     <div className={styles.navbarBag}>
-      <Link to="bag">
+      <Link to="/bag">
         <div data-tooltip-id="bag-tooltip" className={styles.bagContainer} onClick={handleBagClick}>
           <BagIcon className={styles.bagIcon} isFilled={isBagOpen} />
           <div className={styles.number}>{fruitsInBag.length}</div>
