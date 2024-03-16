@@ -1,6 +1,12 @@
+/* Dynamic Spacing */
+
 .fruitItem {
-  z-index: 1;
   --spacing: 25px;
+  --image-size: 60px;
+  --icon-size: 26px;
+}
+
+.fruitItem {
   background-color: var(--color-100);
   border-radius: 8px;
   aspect-ratio: 9 / 10;
@@ -10,17 +16,90 @@
   position: relative;
 }
 
+.image {
+  transform: translateY(-10px);
+  height: var(--image-size);
+  width: var(--image-size);
+}
+
+.info {
+  position: absolute;
+  bottom: var(--spacing);
+  left: var(--spacing);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name,
+.family,
+.price {
+  font-size: 16px;
+}
+
+.favorite,
+.bag {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  cursor: pointer;
+}
+
 .favorite {
-  z-index: 4;
   position: absolute;
   top: var(--spacing);
   right: var(--spacing);
-  height: 26px;
-  width: 26px;
-  cursor: pointer;
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
+
+.bag {
+  position: absolute;
+  bottom: var(--spacing);
+  right: var(--spacing);
+  transition: transform 0.2s ease;
+}
+
+@media screen and (max-width: 940px) {
+  .fruitItem {
+    --spacing: 15px;
+    aspect-ratio: 9 / 12;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fruitItem {
+    --spacing: 20px;
+    aspect-ratio: 9 / 10;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .fruitItem {
+    --spacing: 12px;
+    --image-size: 52px;
+    --icon-size: 20px;
+    border-radius: 5px;
+    aspect-ratio: 10 / 12;
+  }
+
+  .name,
+  .family,
+  .price {
+    font-size: 12px;
+  }
+
+  .info {
+    gap: 4px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .fruitItem {
+    aspect-ratio: 10 / 16;
+  }
+}
+
+/* Other styles */
 
 .fruitItem:hover .favorite {
   opacity: 1;
@@ -35,30 +114,8 @@
   opacity: 1;
 }
 
-.image {
-  height: 60px;
-  width: 60px;
-}
-
-.info {
-  position: absolute;
-  bottom: var(--spacing);
-  left: var(--spacing);
-}
-
 .family {
-  margin: 8px 0;
   color: var(--color-400);
-}
-
-.bag {
-  position: absolute;
-  bottom: var(--spacing);
-  right: var(--spacing);
-  cursor: pointer;
-  height: 26px;
-  width: 26px;
-  transition: transform 0.2s ease;
 }
 
 .bag:hover {

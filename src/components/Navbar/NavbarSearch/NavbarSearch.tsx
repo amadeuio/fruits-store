@@ -1,11 +1,13 @@
 import { useAppContext } from "../../../Context";
 import styles from "./NavbarSearch.module.css";
+import { useNavigate } from "react-router-dom";
 
 import SearchIcon from "../../../icons/SearchIcon";
 
 const NavbarSearch = () => {
   const { filters, setFilters } = useAppContext();
   const { query } = filters;
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     const newQuery = event.target.value;
@@ -14,7 +16,8 @@ const NavbarSearch = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission if needed
+
+    navigate("/store");
   };
 
   return (

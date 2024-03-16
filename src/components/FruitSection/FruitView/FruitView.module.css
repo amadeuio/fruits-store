@@ -23,6 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .leftContainer {
@@ -91,7 +92,7 @@
 
 .checkoutButton,
 .bagButton {
-  width: 340px;
+  max-width: 340px;
 }
 
 .fruitView {
@@ -168,3 +169,79 @@
 .Black {
   background-color: rgb(198, 198, 198);
 }
+
+@media screen and (max-width: 940px) {
+  .image {
+  }
+
+  .fruitView {
+    padding: 50px;
+    padding-top: 60px;
+    gap: 20px;
+  }
+
+  .imageContainer {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fruitView {
+    gap: 90px;
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    flex: 1;
+    align-self: stretch;
+  }
+
+  .imageContainer {
+    width: 460px;
+    height: 460px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .fruitView {
+    gap: 90px;
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    flex: 1;
+    align-self: stretch;
+  }
+
+  .leftContainer {
+    align-items: center;
+  }
+
+  .imageContainer {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+/* 
+@media screen and (max-width: 540px) {
+  .fruitItem {
+    --spacing: 12px;
+    --image-size: 52px;
+    --icon-size: 20px;
+    border-radius: 5px;
+    aspect-ratio: 10 / 12;
+  }
+
+  .name,
+  .family,
+  .price {
+    font-size: 12px;
+  }
+
+  .info {
+    gap: 4px;
+  }
+}
+ */

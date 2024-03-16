@@ -14,12 +14,14 @@ const Navbar = () => {
             <h1>fruits.</h1>
           </Link>
         </div>
-        <NavbarLinks />
+        <NavbarLinks extraClass={styles.links} />
       </div>
       <div className={styles.navbarRight}>
         <NavbarSearch />
-        <NavbarFavorite />
-        <NavbarBag />
+        <div className={styles.rightIcons}>
+          <NavbarFavorite />
+          <NavbarBag />
+        </div>
       </div>
     </nav>
   );

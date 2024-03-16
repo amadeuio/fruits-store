@@ -35,11 +35,34 @@
 }
 
 @media screen and (max-width: 940px) {
+  .title {
+    font-size: 16px;
+  }
+
   .fruitSection {
     padding-left: 50px;
   }
 
   .fruitGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .fruitSection {
+    padding: 25px;
+  }
+
+  .fruitGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .title {
+    font-size: 14px;
+  }
+  .fruitGrid {
+    grid-gap: 12px;
   }
 }

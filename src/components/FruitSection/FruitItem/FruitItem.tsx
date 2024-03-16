@@ -50,10 +50,11 @@ const FruitItem = ({ fruit }: FruitItemProps) => {
             isFilled={isFavorite}
             onClick={(e) => handleFavoriteClick(e)}
           />
+
           <img className={styles.image} src={getImageSrc(slug)} alt={name} />
 
           <div className={styles.info}>
-            <h3>{name}</h3>
+            <h3 className={styles.name}>{name}</h3>
             <h4 className={styles.family}>{family} Family</h4>
             <h5 className={styles.price}>${price.toFixed(1)}</h5>
           </div>

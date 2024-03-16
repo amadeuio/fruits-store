@@ -33,3 +33,19 @@
 .searchInput:hover::placeholder {
   color: var(--color-400);
 }
+
+@media screen and (max-width: 540px) {
+  .searchInput {
+    width: 190px;
+  }
+
+  .navbarSearch {
+    transform: translateX(-20px);
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .searchInput {
+    width: 120px;
+  }
+}

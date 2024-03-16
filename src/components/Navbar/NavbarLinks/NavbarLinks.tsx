@@ -2,17 +2,20 @@ import { Link } from "react-router-dom";
 import styles from "./NavbarLinks.module.css";
 import { useAppContext } from "../../../Context";
 
-const NavbarLinks = () => {
+interface NavbarLinksProps {
+  extraClass?: string; // optional prop for extra class
+}
+
+const NavbarLinks = ({ extraClass }: NavbarLinksProps) => {
   const { filters, setFilters } = useAppContext();
 
   const handleStoreClick = () => {
     const updatedFilters = { ...filters, favorite: false };
-
     setFilters(updatedFilters);
   };
 
   return (
-    <ul className={styles.navbarLinks}>
+    <ul className={`${styles.navbarLinks} ${extraClass}`}>
       <li className={styles.link}>
         <Link to="/">
           <h3>Home</h3>

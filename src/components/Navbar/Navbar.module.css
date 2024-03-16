@@ -5,7 +5,8 @@
 }
 
 .navbarRight,
-.navbarLeft {
+.navbarLeft,
+.rightIcons {
   display: flex;
   align-items: center;
 }
@@ -18,12 +19,42 @@
   gap: 50px;
 }
 
+.rightIcons {
+  gap: 10px;
+}
+
+.links {
+  display: none;
+}
+
 @media screen and (max-width: 940px) {
   .logo {
     display: none;
   }
 
   .navbarLeft {
-    margin-left: 40px;
+    padding-left: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbarLeft {
+    display: none;
+  }
+
+  .navbarRight {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .rightIcons {
+    right: 25px;
+    position: absolute;
   }
 }
