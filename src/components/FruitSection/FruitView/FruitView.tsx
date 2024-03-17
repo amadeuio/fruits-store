@@ -53,6 +53,7 @@ const FruitView = () => {
           />
           <img className={styles.image} src={getImageSrc(slug)} alt={name} />
         </div>
+        
         <div className={styles.categories}>
           {colors.map((color) => (
             <div key={color} className={`${styles.color} ${styles[color]}`}>

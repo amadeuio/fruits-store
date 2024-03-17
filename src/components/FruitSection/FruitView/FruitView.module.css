@@ -12,6 +12,10 @@
   gap: 10px;
 }
 
+.leftContainer {
+  gap: 15px;
+}
+
 .description {
   margin: 20px 0;
   line-height: 1.5;
@@ -59,23 +63,18 @@
 
 .image {
   height: 100px;
-  width: auto;
-}
-
-.leftContainer {
-  position: relative;
+  width: 100px;
 }
 
 .categories {
-  position: absolute;
-  left: 0px;
-  bottom: -38px;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
 .vitamin,
 .color {
+  white-space: nowrap;
   font-size: 10px;
   font-weight: 500;
   padding: 5px 12px;
@@ -171,77 +170,42 @@
 }
 
 @media screen and (max-width: 940px) {
+  .imageContainer {
+    width: 360px;
+    height: 360px;
+  }
+}
+
+@media screen and (max-width: 835px) {
+  .fruitView {
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    flex: 1;
+    align-self: stretch;
+  }
+
+  .imageContainer {
+    width: auto;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+
   .image {
+    width: 28%;
+    height: 28%;
   }
 
+  .checkoutButton,
+  .bagButton {
+    max-width: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
   .fruitView {
-    padding: 50px;
+    padding: 30px;
     padding-top: 60px;
-    gap: 20px;
-  }
-
-  .imageContainer {
-    width: 360px;
-    height: 360px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .fruitView {
-    gap: 90px;
-    flex-direction: column;
-  }
-
-  .leftContainer {
-    flex: 1;
-    align-self: stretch;
-  }
-
-  .imageContainer {
-    width: 460px;
-    height: 460px;
-  }
-}
-
-@media screen and (max-width: 540px) {
-  .fruitView {
-    gap: 90px;
-    flex-direction: column;
-  }
-
-  .leftContainer {
-    flex: 1;
-    align-self: stretch;
-  }
-
-  .leftContainer {
-    align-items: center;
-  }
-
-  .imageContainer {
-    width: 360px;
-    height: 360px;
-  }
-}
-
-/* 
-@media screen and (max-width: 540px) {
-  .fruitItem {
-    --spacing: 12px;
-    --image-size: 52px;
-    --icon-size: 20px;
-    border-radius: 5px;
-    aspect-ratio: 10 / 12;
-  }
-
-  .name,
-  .family,
-  .price {
-    font-size: 12px;
-  }
-
-  .info {
-    gap: 4px;
-  }
-}
- */
