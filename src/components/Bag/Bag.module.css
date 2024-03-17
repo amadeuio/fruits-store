@@ -6,11 +6,11 @@
   gap: 30px;
 }
 
-.bagBottom {
-  gap: 80px;
+.main {
+  gap: 50px;
 }
 
-.fruitsContainer {
+.leftContainer {
   gap: 30px;
 }
 
@@ -27,14 +27,15 @@
   flex-direction: column;
 }
 
-.bagBottom {
+.main {
   display: flex;
+  justify-content: space-between;
 }
 
-.fruitsContainer {
+.leftContainer {
+  max-width: 630px;
   flex: 1;
   align-self: stretch;
-
   display: flex;
   flex-direction: column;
 }
@@ -76,4 +77,48 @@
 .emptyBag {
   font-size: 16px;
   color: var(--color-400);
+}
+
+@media screen and (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .leftContainer {
+    max-width: none;
+  }
+
+  .checkout {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .bag {
+    padding: 30px;
+    padding-top: 60px;
+  }
+
+  .buttonBack {
+    left: 22px;
+  }
+
+  .checkout {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bag {
+    padding: 20px;
+    padding-top: 60px;
+  }
+
+  .buttonBack {
+    left: 11px;
+  }
+
+  .checkout {
+    padding: 30px;
+  }
 }

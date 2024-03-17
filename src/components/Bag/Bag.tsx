@@ -34,12 +34,10 @@ const Bag = () => {
     <div className={styles.bag}>
       <ButtonBack className={styles.buttonBack} onClick={handleGoBack} />
 
-      <div className={styles.bagTop}>
-        <h2>Shopping Bag</h2>
-      </div>
+      <h2>Shopping Bag</h2>
 
-      <div className={styles.bagBottom}>
-        <ul className={styles.fruitsContainer}>
+      <div className={styles.main}>
+        <ul className={styles.leftContainer}>
           {fruitsInBag.length > 0 ? (
             fruitsInBag.map((fruit) => <BagFruit key={fruit.id} fruit={fruit} />)
           ) : (
@@ -47,7 +45,7 @@ const Bag = () => {
           )}
         </ul>
 
-        <div className={styles.checkoutContainer}>
+        <div className={styles.rightContainer}>
           <div className={styles.checkout}>
             <h2>Order Summary</h2>
             <h2 className={styles.priceTitle}>${totalPrice}</h2>

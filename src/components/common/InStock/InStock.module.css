@@ -3,6 +3,7 @@
   align-items: center;
   font-size: 14px;
   color: var(--color-blue);
+  white-space: nowrap;
 }
 
 .box {

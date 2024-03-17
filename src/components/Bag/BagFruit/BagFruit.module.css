@@ -4,13 +4,20 @@
   gap: 30px;
 }
 
-.infoContainer {
-  gap: 5px;
-  margin-right: 50px;
+.rightContainer {
+  gap: 50px;
 }
 
 .imageContainer {
   padding: 55px;
+}
+
+.infoAndQuantity {
+  gap: 60px;
+}
+
+.info {
+  gap: 5px;
 }
 
 /* Other styles */
@@ -27,15 +34,10 @@
 }
 
 .rightContainer {
-  width: 110px;
+  align-self: stretch;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.image {
-  height: 35px;
-  width: 35px;
 }
 
 .imageContainer {
@@ -43,15 +45,30 @@
   border-radius: 8px;
 }
 
-.infoContainer {
+.image {
+  height: 35px;
+  width: 35px;
+}
+
+.info {
   display: flex;
   flex-direction: column;
+}
+
+.infoAndQuantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .qty {
   font-size: 14px;
   color: var(--color-400);
   font-weight: 400;
+}
+
+.family {
+  white-space: nowrap;
 }
 
 .deleteIcon {
@@ -74,4 +91,42 @@
 
 .delete:hover {
   background-color: var(--color-200);
+}
+
+@media (max-width: 679px) {
+  .leftContainer {
+    gap: 18px;
+  }
+
+  .rightContainer {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 70px;
+  }
+
+  .infoAndQuantity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .leftContainer {
+    gap: 12px;
+  }
+
+  .imageContainer {
+    padding: 40px;
+  }
+
+  .image {
+    height: 30px;
+    width: 30px;
+  }
+
+  .infoAndQuantity {
+    gap: 8px;
+  }
 }

@@ -20,14 +20,16 @@ const BagFruit = ({ fruit }) => {
           <img className={styles.image} src={getImageSrc(slug)} alt={name} />
         </div>
 
-        <div className={styles.infoContainer}>
-          <h3>{name}</h3>
-          <h4>{family} Family</h4>
-          <InStock />
-          <div className={styles.qty}>Qty: {quantity}</div>
-        </div>
+        <div className={styles.infoAndQuantity}>
+          <div className={styles.info}>
+            <h3>{name}</h3>
+            <h4 className={styles.family}>{family} Family</h4>
+            <InStock />
+            <div className={styles.qty}>Qty: {quantity}</div>
+          </div>
 
-        <EditQuantity fruit={fruit} />
+          <EditQuantity fruit={fruit} />
+        </div>
       </div>
 
       <div className={styles.rightContainer}>
