@@ -4,6 +4,7 @@ import DeleteIcon from "../../../icons/DeleteIcon";
 import InStock from "../../common/InStock/InStock";
 import EditQuantity from "../../common/EditQuantity/EditQuantity";
 import { useAppContext } from "../../../Context";
+import { Link } from "react-router-dom";
 
 const BagFruit = ({ fruit }) => {
   const { setFruits } = useAppContext();
@@ -16,9 +17,11 @@ const BagFruit = ({ fruit }) => {
   return (
     <li className={styles.bagFruit}>
       <div className={styles.leftContainer}>
-        <div className={styles.imageContainer}>
-          <img className={styles.image} src={getImageSrc(slug)} alt={name} />
-        </div>
+        <Link to={`/store/${slug}`}>
+          <div className={styles.imageContainer}>
+            <img className={styles.image} src={getImageSrc(slug)} alt={name} />
+          </div>
+        </Link>
 
         <div className={styles.infoAndQuantity}>
           <div className={styles.info}>
