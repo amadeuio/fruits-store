@@ -1,13 +1,13 @@
-import { FruitsContextProvider } from "./Context";
+import { AppContextProvider } from "./Context";
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <FruitsContextProvider>
+    <AppContextProvider>
       <Navbar />
       <Outlet />
-    </FruitsContextProvider>
+    </AppContextProvider>
   );
 };
 

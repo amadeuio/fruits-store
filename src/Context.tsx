@@ -22,7 +22,7 @@ interface FruitsContext {
   setFilters: SetFilters;
 }
 
-interface FruitsContextProviderProps {
+interface AppContextProviderProps {
   children: ReactNode;
 }
 
@@ -33,7 +33,7 @@ export const useAppContext = () => {
   return useContext(FruitsContext);
 };
 
-export const FruitsContextProvider: FC<FruitsContextProviderProps> = ({ children }) => {
+export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) => {
   const [fruits, setFruits] = useState<Fruits>(initialFruits);
   const [filters, setFilters] = useState<Filters>(initialFilters);
 
