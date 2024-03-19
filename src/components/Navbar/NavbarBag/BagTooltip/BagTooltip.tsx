@@ -2,6 +2,7 @@ import { useAppContext } from "../../../../Context";
 import { Link } from "react-router-dom";
 import styles from "./BagTooltip.module.css";
 import getImageSrc from "../../../../utils/getImageSrc";
+import showCheckoutMessage from "../../../../utils/showCheckoutMessage";
 import { Fruits } from "../../../../data/types";
 import ButtonWhite from "../../../common/ButtonWhite/ButtonWhite";
 import ButtonBlue from "../../../common/ButtonBlue/ButtonBlue";
@@ -15,13 +16,7 @@ const BagTooltip = ({ fruitsInBag }: BagTooltipProps) => {
   const { setFruits } = useAppContext();
 
   const handleCheckoutClick = () => {
-    if (fruitsInBag.length > 0) {
-      alert(
-        "Congratulations! You would have made a successful purchase if this was a real store 😁"
-      );
-    } else {
-      alert("Cannot proceed with checkout. Your bag is empty.");
-    }
+    showCheckoutMessage(fruitsInBag);
   };
 
   const handleDelete = (id) => {

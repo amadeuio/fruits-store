@@ -1,6 +1,7 @@
 import { useAppContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import styles from "./Bag.module.css";
+import showCheckoutMessage from "../../utils/showCheckoutMessage";
 import BagFruit from "./BagFruit/BagFruit";
 import ButtonBlue from "../common/ButtonBlue/ButtonBlue";
 import ButtonBack from "../common/ButtonBack/ButtonBack";
@@ -21,13 +22,7 @@ const Bag = () => {
   };
 
   const handleCheckoutClick = () => {
-    if (fruitsInBag.length > 0) {
-      alert(
-        "Congratulations! You would have made a successful purchase if this was a real store 😁"
-      );
-    } else {
-      alert("Cannot proceed with checkout. Your bag is empty.");
-    }
+    showCheckoutMessage(fruitsInBag);
   };
 
   return (

@@ -12,33 +12,21 @@ interface FruitItemProps {
 }
 
 const FruitItem = ({ fruit }: FruitItemProps) => {
-  const { fruits, setFruits } = useAppContext();
+  const { setFruits } = useAppContext();
   const { id, name, slug, price, family, isFavorite, inBag } = fruit;
 
   const handleFavoriteClick = (e) => {
     e.preventDefault();
 
-    const updatedFruits = fruits.map((f) => {
-      if (f.id === id) {
-        return { ...f, isFavorite: !f.isFavorite };
-      }
-      return f;
-    });
-
-    setFruits(updatedFruits);
+    setFruits((prevFruits) =>
+      prevFruits.map((f) => (f.id === id ? { ...f, isFavorite: !f.isFavorite } : f))
+    );
   };
 
   const handleBagClick = (e) => {
     e.preventDefault();
 
-    const updatedFruits = fruits.map((f) => {
-      if (f.id === id) {
-        return { ...f, inBag: !f.inBag };
-      }
-      return f;
-    });
-
-    setFruits(updatedFruits);
+    setFruits((prevFruits) => prevFruits.map((f) => (f.id === id ? { ...f, inBag: !f.inBag } : f)));
   };
 
   return (

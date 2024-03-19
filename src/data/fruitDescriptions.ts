@@ -33,7 +33,7 @@ export const fruitDescriptions: FruitDescriptions = {
     "Tangerines are small citrus fruits that are similar in appearance to oranges, but they are smaller and have a thinner, easier-to-peel skin. They are typically sweet with a slightly tart flavor, and they are often juicier than oranges. Tangerines have a distinct aroma and a bright orange color.",
 
   Melon:
-    "Melon is a broad term that refers to various fruits belonging to the Cucurbitaceae family, including cantaloupe, honeydew, and watermelon. Melons are characterized by their sweet, juicy flesh and refreshing taste. Cantaloupes have a sweet and slightly musky flavor, honeydews are typically sweeter with a subtle honey-like taste, and watermelons have a crisp texture and a very sweet flavor with a hint of freshness.",
+    "Melon is a broad term that refers to various fruits belonging to the Gourd family, including cantaloupe, honeydew, and watermelon. Melons are characterized by their sweet, juicy flesh and refreshing taste. Cantaloupes have a sweet and slightly musky flavor, honeydews are typically sweeter with a subtle honey-like taste, and watermelons have a crisp texture and a very sweet flavor with a hint of freshness.",
 
   Watermelon:
     "Watermelon is a large, round fruit with a thick green rind and juicy, red flesh dotted with black seeds (although seedless varieties are also common). Watermelons have a high water content, making them incredibly hydrating and refreshing. Their flavor is sweet and slightly tangy, with a crisp texture.",
