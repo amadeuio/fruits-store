@@ -8,8 +8,8 @@ const Home = () => {
       <h1 className={styles.title}>Welcome to fruits.</h1>
 
       <p className={styles.description}>
-        Discover our vibrant selection of fresh fruits, bursting with flavor, nutrition and
-        vitality. Delivered straight from the farm to your table.
+        Discover our vibrant selection of fresh fruits, bursting with flavor and vitality. Delivered
+        straight from the farm to your table.
       </p>
 
       <Link to="/store">
