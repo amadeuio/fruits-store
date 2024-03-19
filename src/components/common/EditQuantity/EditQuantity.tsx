@@ -1,7 +1,7 @@
+import { useAppContext } from "../../../Context";
 import styles from "./EditQuantity.module.css";
 import MinusIcon from "../../../icons/MinusIcon";
 import PlusIcon from "../../../icons/PlusIcon";
-import { useAppContext } from "../../../Context";
 
 const EditQuantity = ({ fruit }) => {
   const { setFruits } = useAppContext();

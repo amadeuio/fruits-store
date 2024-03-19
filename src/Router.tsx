@@ -1,13 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App.tsx";
-import Store from "./components/Store/Store.tsx";
-import Home from "./components/Home/Home.tsx";
-import ErrorPage from "./components/ErrorPage/ErrorPage.tsx";
-import Bag from "./components/Bag/Bag.tsx";
-import FruitView from "./components/FruitSection/FruitView/FruitView.tsx";
-
 import "./css/reset.css";
 import "./css/global.css";
+import App from "./App.tsx";
+import Home from "./components/Home/Home.tsx";
+import Store from "./components/Store/Store.tsx";
+import FruitView from "./components/FruitSection/FruitView/FruitView.tsx";
+import Bag from "./components/Bag/Bag.tsx";
+import ErrorPage from "./components/ErrorPage/ErrorPage.tsx";
 
 const Router = () => {
   const router = createBrowserRouter([

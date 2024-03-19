@@ -1,6 +1,6 @@
-import Navbar from "./components/Navbar/Navbar";
-import { Outlet } from "react-router-dom";
 import { FruitsContextProvider } from "./Context";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (

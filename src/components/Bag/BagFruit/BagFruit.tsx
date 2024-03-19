@@ -1,10 +1,10 @@
-import styles from "./BagFruit.module.css";
-import getImageSrc from "../../../utils/getImageSrc";
-import DeleteIcon from "../../../icons/DeleteIcon";
-import InStock from "../../common/InStock/InStock";
-import EditQuantity from "../../common/EditQuantity/EditQuantity";
 import { useAppContext } from "../../../Context";
 import { Link } from "react-router-dom";
+import styles from "./BagFruit.module.css";
+import getImageSrc from "../../../utils/getImageSrc";
+import InStock from "../../common/InStock/InStock";
+import EditQuantity from "../../common/EditQuantity/EditQuantity";
+import DeleteIcon from "../../../icons/DeleteIcon";
 
 const BagFruit = ({ fruit }) => {
   const { setFruits } = useAppContext();

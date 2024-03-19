@@ -1,11 +1,11 @@
-import styles from "./FruitItem.module.css";
-import { Fruit } from "../../../data/types";
 import { useAppContext } from "../../../Context";
-import FavoriteIcon from "../../../icons/FavoriteIcon";
-import BagIcon from "../../../icons/BagIcon";
-import getImageSrc from "../../../utils/getImageSrc";
 import { Link } from "react-router-dom";
 import { Flipped } from "react-flip-toolkit";
+import styles from "./FruitItem.module.css";
+import getImageSrc from "../../../utils/getImageSrc";
+import { Fruit } from "../../../data/types";
+import FavoriteIcon from "../../../icons/FavoriteIcon";
+import BagIcon from "../../../icons/BagIcon";
 
 interface FruitItemProps {
   fruit: Fruit;

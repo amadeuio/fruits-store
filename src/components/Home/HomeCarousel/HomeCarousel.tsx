@@ -1,9 +1,11 @@
-import styles from "./HomeCarousel.module.css";
-import { Fruit } from "../../../data/types";
-import getImageSrc from "../../../utils/getImageSrc";
-import { Link } from "react-router-dom";
 import { useAppContext } from "../../../Context";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from "./HomeCarousel.module.css";
+import getImageSrc from "../../../utils/getImageSrc";
+import { Fruit } from "../../../data/types";
 
 interface CarouselFruitProps {
   fruit: Fruit;

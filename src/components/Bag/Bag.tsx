@@ -1,6 +1,6 @@
-import styles from "./Bag.module.css";
 import { useAppContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
+import styles from "./Bag.module.css";
 import BagFruit from "./BagFruit/BagFruit";
 import ButtonBlue from "../common/ButtonBlue/ButtonBlue";
 import ButtonBack from "../common/ButtonBack/ButtonBack";

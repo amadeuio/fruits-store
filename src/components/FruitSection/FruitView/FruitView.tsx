@@ -1,21 +1,21 @@
-import styles from "./FruitView.module.css";
-import { useParams } from "react-router-dom";
 import { useAppContext } from "../../../Context";
+import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import styles from "./FruitView.module.css";
 import getImageSrc from "../../../utils/getImageSrc";
+import { fruitDescriptions } from "../../../data/fruitDescriptions";
+import EditQuantity from "../../common/EditQuantity/EditQuantity";
 import InStock from "../../common/InStock/InStock";
 import ButtonBlue from "../../common/ButtonBlue/ButtonBlue";
 import ButtonWhite from "../../common/ButtonWhite/ButtonWhite";
 import ButtonBack from "../../common/ButtonBack/ButtonBack";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
-import EditQuantity from "../../common/EditQuantity/EditQuantity";
-import { fruitDescriptions } from "../../../data/fruitDescriptions";
 
 const FruitView = () => {
   const navigate = useNavigate();
   const { fruits, setFruits } = useAppContext();
   const { slug } = useParams<{ slug: string }>();
-
+  
   const fruit = fruits.find((fruit) => fruit.slug === slug);
   const { id, name, price, quantity, family, colors, vitamins, isFavorite, inBag } = fruit;
   const description = fruitDescriptions[name];
@@ -53,7 +53,7 @@ const FruitView = () => {
           />
           <img className={styles.image} src={getImageSrc(slug)} alt={name} />
         </div>
-        
+
         <div className={styles.categories}>
           {colors.map((color) => (
             <div key={color} className={`${styles.color} ${styles[color]}`}>

@@ -1,6 +1,6 @@
 import { MouseEvent } from "react";
-import BagIcon from "../../../icons/BagIcon";
 import styles from "./ButtonWhite.module.css";
+import BagIcon from "../../../icons/BagIcon";
 
 interface Props {
   className?: string;

@@ -1,13 +1,11 @@
-import styles from "./NavbarBag.module.css";
-import BagIcon from "../../../icons/BagIcon";
 import { useAppContext } from "../../../Context";
+import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-
 import { Tooltip } from "react-tooltip";
 import BagTooltip from "./BagTooltip/BagTooltip";
 import "react-tooltip/dist/react-tooltip.css";
-
-import { useLocation } from "react-router-dom";
+import styles from "./NavbarBag.module.css";
+import BagIcon from "../../../icons/BagIcon";
 
 const NavbarBag = () => {
   const { fruits, setFilters } = useAppContext();

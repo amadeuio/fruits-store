@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useAppContext } from "../../../Context";
 import styles from "./SidebarColor.module.css";
-
 import CheckIcon from "../../../icons/CheckIcon";
 import ExpandIcon from "../../../icons/ExpandIcon";
 

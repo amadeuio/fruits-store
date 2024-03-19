@@ -1,11 +1,11 @@
+import { useAppContext } from "../../../../Context";
+import { Link } from "react-router-dom";
 import styles from "./BagTooltip.module.css";
 import getImageSrc from "../../../../utils/getImageSrc";
-import { Link } from "react-router-dom";
+import { Fruits } from "../../../../data/types";
 import ButtonWhite from "../../../common/ButtonWhite/ButtonWhite";
 import ButtonBlue from "../../../common/ButtonBlue/ButtonBlue";
-import { Fruits } from "../../../../data/types";
 import DeleteIcon from "../../../../icons/DeleteIcon";
-import { useAppContext } from "../../../../Context";
 
 interface BagTooltipProps {
   fruitsInBag: Fruits;

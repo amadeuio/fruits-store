@@ -1,7 +1,6 @@
 import { useAppContext } from "../../../Context";
-import styles from "./NavbarSearch.module.css";
 import { useNavigate } from "react-router-dom";
-
+import styles from "./NavbarSearch.module.css";
 import SearchIcon from "../../../icons/SearchIcon";
 
 const NavbarSearch = () => {

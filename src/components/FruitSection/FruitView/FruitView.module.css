@@ -1,5 +1,3 @@
-@import "../../../css/global.css";
-
 /* Spacing */
 
 .fruitView {
@@ -135,40 +133,6 @@
   opacity: 1;
 }
 
-/* Checkbox background colors: */
-
-.Purple {
-  background-color: rgb(255, 191, 255);
-}
-
-.Green {
-  background-color: rgb(200, 244, 200);
-}
-
-.Brown {
-  background-color: rgb(234, 189, 189);
-}
-
-.Red {
-  background-color: rgb(255, 179, 179);
-}
-
-.Orange {
-  background-color: rgb(255, 208, 180);
-}
-
-.Yellow {
-  background-color: rgb(255, 245, 150);
-}
-
-.Blue {
-  background-color: rgb(179, 179, 255);
-}
-
-.Black {
-  background-color: rgb(198, 198, 198);
-}
-
 @media screen and (max-width: 940px) {
   .imageContainer {
     width: 360px;
@@ -212,4 +176,38 @@
   .buttonBack {
     left: 22px;
   }
+}
+
+/* Checkbox background colors: */
+
+.Purple {
+  background-color: rgb(255, 191, 255);
+}
+
+.Green {
+  background-color: rgb(200, 244, 200);
+}
+
+.Brown {
+  background-color: rgb(234, 189, 189);
+}
+
+.Red {
+  background-color: rgb(255, 179, 179);
+}
+
+.Orange {
+  background-color: rgb(255, 208, 180);
+}
+
+.Yellow {
+  background-color: rgb(255, 245, 150);
+}
+
+.Blue {
+  background-color: rgb(179, 179, 255);
+}
+
+.Black {
+  background-color: rgb(198, 198, 198);
 }

@@ -1,7 +1,7 @@
 import { useAppContext } from "../../../Context";
+import { Link } from "react-router-dom";
 import styles from "./NavbarFavorite.module.css";
 import FavoriteIcon from "../../../icons/FavoriteIcon";
-import { Link } from "react-router-dom";
 
 const NavbarFavorite = () => {
   const { fruits, filters, setFilters } = useAppContext();

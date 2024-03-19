@@ -1,7 +1,7 @@
 import { useAppContext } from "../../Context";
+import { Flipper } from "react-flip-toolkit";
 import styles from "./FruitSection.module.css";
 import filterFruits from "../../utils/filterFruits";
-import { Flipper } from "react-flip-toolkit";
 import FruitItem from "./FruitItem/FruitItem";
 import ActiveFilters from "./ActiveFilters/ActiveFilters";
 
@@ -12,14 +12,16 @@ const FruitSection = () => {
   return (
     <div className={styles.fruitSection}>
       <h2 className={styles.title}>
-        Items ({filteredFruits.length}){" "}
+        Items ({filteredFruits.length})
         {filters.favorite && (
           <span className={styles.favoritesTitle}>
-            <span className={styles.emDash}>—</span> Favorites
+            <span className={styles.emDash}>—</span>Favorites
           </span>
         )}
       </h2>
+
       <ActiveFilters />
+
       {filteredFruits.length === 0 ? (
         <p className={styles.noMatch}>No fruits match the current filters.</p>
       ) : (

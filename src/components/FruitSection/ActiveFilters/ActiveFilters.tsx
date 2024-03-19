@@ -1,5 +1,5 @@
-import styles from "./ActiveFilters.module.css";
 import { useAppContext } from "../../../Context";
+import styles from "./ActiveFilters.module.css";
 import getCheckedFilters from "../../../utils/getCheckedFilters";
 import CloseIcon from "../../../icons/CloseIcon";
 
