@@ -29,7 +29,7 @@ const CarouselFruit = ({ fruit }: CarouselFruitProps) => {
 const HomeCarousel = () => {
   const { fruits } = useAppContext();
 
-  const carouselFruitNames = ["Banana", "Tangerine", "Blueberries", "Lemon", "Kiwi"];
+  const carouselFruitNames = ["Cherries", "Avocado", "Tangerine", "Melon", "Grapes"];
   const carouselFruits = carouselFruitNames.map((name) =>
     fruits.find((fruit) => fruit.name === name)
   );

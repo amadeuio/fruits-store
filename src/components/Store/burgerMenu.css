@@ -1,3 +1,5 @@
+/* React-burger-menu styles */
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -25,7 +27,13 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #000000;
+  width: 24px;
+  height: 24px;
+}
+
+.bm-cross-button {
+  top: 10px !important;
+  right: -32px !important;
 }
 
 @media screen and (max-width: 768px) {

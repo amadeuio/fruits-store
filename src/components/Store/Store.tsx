@@ -5,6 +5,7 @@ import "./burgerMenu.css";
 import Sidebar from "../Sidebar/Sidebar";
 import FruitSection from "../FruitSection/FruitSection";
 import BurgerIcon from "../../icons/BurgerIcon";
+import CloseIcon from "../../icons/CloseIcon";
 
 const Store = () => {
   const [showBurger, setShowBurger] = useState(false);
@@ -24,7 +25,10 @@ const Store = () => {
   return (
     <div className={styles.store}>
       {showBurger ? (
-        <BurgerMenu customBurgerIcon={<BurgerIcon />}>
+        <BurgerMenu
+          customBurgerIcon={<BurgerIcon />}
+          customCrossIcon={<CloseIcon />}
+          width={"auto"}>
           <Sidebar />
         </BurgerMenu>
       ) : (
