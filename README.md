@@ -127,7 +127,7 @@ Because `fruits` and `filters` are state variables, a re-render is triggered eve
 
 Because the app is a representation of the fruit and filter data, you can customize it by simply editing that data with your own desired products and filters with relative ease and minimal code tweaks.
 
-Your own products data should be used with the same formatting in `fruits.ts`, and their correpsonding filters in `filters.ts`. Feel free to contact me if you need help with this.
+Your own products data should be used with the same formatting in [`fruits.ts`](src/data/fruits.ts), and their correpsonding filters in [`filters.ts`](src/data/filters.ts). Feel free to contact me if you need help with this.
 
 ## Run Locally
 
