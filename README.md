@@ -3,34 +3,35 @@
 
 # Fruits Store
 
-Powerful and lightweight e-commerce store.
+Powerful and lightweight fruits e-commerce store.
 
 ## Features
 
-- Pages: Home, Store, Fruit, and Bag
+- Home, Store, Fruit, and Bag pages
+- Fruit Filtering
 - Add to Bag or Favorites
-- Edit Quantity
-- Filter fruits to narrow down results
 - Bag Preview on hover
-- Minimalistic design, smooth animations and speed just make it a joy to use
+- Minimalistic design, smooth animations and speed
 - Design inspired by Nike and Apple
 - Responsive
 
-## Filtering
+## Fruit Filtering
 
-- Filter by name, color, family, vitamins, favorites or a text search
+Filters help you narrow down the displayed fruits.
 
-- Real-time updates: Upon activation or deactivation of filters, displayed fruits update instantly, without the need to click on any confirmation buttons.
+- Filter fruits by colors, family, vitamins, favorites or a search query
+- Multiple filters can be combined
+- Results update in real-time
 
-- Stacking: Active filters combine. For example: Yellow Color + Citrus Family yields Lemon.
-- Filter Tags: Active filters are displayed at the top of the page with a removal option
-- Transitions: Fruits have a smooth transition effect as they re-arrange
+#### Search Query
 
-#### Text Search
-
-- Search fruits by name, color, family, or vitamins. For example, try searching for `um` (Result: Cucumber, Pumpkin) or `b6` (Result: Banana, Pineapple, Cocounut i.e fruits containing Vitamin B6)
-
+- Useful to search a fruit by it's name using text
 - Case, spaces and symbols insensitive
+- Aditionally, the search also works with colors, family or vitamins, but you may use the dedicated checkboxes for that
+- Try these examples:
+  - Searching `um` yields Cucumber, Pumpkin
+  - Searching `b6` yields Banana, Pineapple, Cocounut (i.e fruits with Vitamin B6)
+  - Searching `pepper` and selecting the `Red` checkbox yields Hot Pepper (example of filters combined)
 
 ## Tech Stack
 
@@ -38,42 +39,38 @@ Powerful and lightweight e-commerce store.
 - **Languages:** TypeScript, CSS, HTML
 - **Build Tool:** Vite
 - **Dependencies:**
-
-  - react-burger-menu: Expandable burger menu (used for mobile)
+  - react-burger-menu: Expandable burger menu for mobile
   - react-flip-toolkit: Transition effect when fruits re-arrange
   - react-router-dom: Page routing
   - react-slick: Home page carousel
-  - react-tooltip: Shopping bag tooltip
+  - react-tooltip: Bag tooltip
   - uuid: Unique ID's
-  - css-modules: Modular CSS styles
+  - css-modules: Modular CSS
 
 ## Main Directories
 
-All of these are located in `src`
+Located in `src`:
 
-- `components`: React components and it's stylesheets
-- `data`: Storage of the necessary data and it's type definitions
+- `components`: React components and it's stylesheet modules
+- `data`: Storage of data and it's type definitions
 - `utils`: Utility functions used multiple times throughout the app
 - `css`: Global CSS styles
 - `Context.tsx`: Context API provider component, used to share the data throughout the app
-- `Router.tsx`: Router provider component
-- `App.tsx`: Navbar and outlet
+- `Router.tsx`: React router provider component
 - `main.tsx`: Entry point for the React app
 
-In the root
+Located the root:
 
 - `docs`: Distribution files generated during the build, GitHub pages is reading the root of this directory
 - `public`: Images and font
 
 ## Data & Functionality
 
-The app uses the following state data, available througout the whole app using Context API.
+The app uses the following state data, shared througout the whole app using Context API.
 
-#### 1. `Fruits` Array:
+#### 1. `Fruit` Object
 
-Represents all the fruits in the store, made of fruit objects.
-
-Example:
+Represents each fruit in the store. All fruit objects are stored in a `fruits` array. Example:
 
 ```javascript
 {
@@ -92,9 +89,7 @@ Example:
 
 #### 2. `Filters` Object:
 
-Represents all the filters that are active or inactive at any given time
-
-Example:
+Represents all the filters and their active or inactive state. Example:
 
 ```javascript
 {
@@ -118,13 +113,19 @@ Example:
 }
 ```
 
-The `filterFruits` function takes both `fruits` and `filters` and returns an array of the fruits that match the filters, the `fruitSection` component then renders this array, showing only the matching fruits on screen.
+The app is constantly reading, rendering and updating this data according to user interactions, ensuring the app reflects the state correctly at all times.
 
-Because `fruits` and `filters` are state variables, a re-render is triggered everytime they change and `filterFruits` is re-called, ensuring the shown fruits are always up-to date with the state of the app.
+#### How does the filtering functionality work?
+
+The `filterFruits` function is the key to this functionality. It takes both `fruits` and `filters` and returns an array of the fruits that match the filters.
+
+The `fruitSection` component is rendering this array, showing only the matching fruits on screen.
+
+Because `fruits` and `filters` are state variables, a re-render is triggered everytime they change and `filterFruits` is re-called, ensuring the shown fruits are always up-to date with the the filters.
 
 ## Customization
 
-Because the app heavily relies on data, you can customize it by using your own product's data with realative ease and minimal code tweaks.
+Because the app is a representation of the fruit and filter data, you can customize it by simply editing that data with your own desired products and filters with relative ease and minimal code tweaks.
 
 Your own products data should be used with the same formatting in `fruits.ts`, and their correpsonding filters in `filters.ts`. Feel free to contact me if you need help with this.
 
@@ -157,6 +158,7 @@ Start the server
 ## Acknowledgements
 
 - [Apple Fruit Emojis](https://emojipedia.org/apple)
+- [Google Icons](https://fonts.google.com/icons)
 - [GPT](https://chat.openai.com)
 - [shields.io](https://shields.io)
 
