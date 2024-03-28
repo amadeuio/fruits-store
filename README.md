@@ -1,5 +1,5 @@
-![react](https://img.shields.io/badge/Stack-React_|_TypeScript-149eca)
-![license](https://img.shields.io/badge/license-MIT-green)
+![stack](https://img.shields.io/badge/Stack-React_|_TypeScript-149eca)
+![license](https://img.shields.io/badge/License-MIT-green)
 
 # Fruits Store
 
@@ -117,9 +117,9 @@ The app is constantly reading, rendering and updating this data according to use
 
 #### How does the filtering functionality work?
 
-The `filterFruits` function is the key to this functionality. It takes both `fruits` and `filters` and returns an array of the fruits that match the filters.
+The [`filterFruits`](src/utils/filterFruits.ts) function is the key to this functionality. It takes both `fruits` and `filters` and returns an array of the fruits that match the filters.
 
-The `fruitSection` component is rendering this array, showing only the matching fruits on screen.
+The [`fruitSection`](src/components/FruitSection/FruitSection.tsx) component is rendering this array, showing only the matching fruits on screen.
 
 Because `fruits` and `filters` are state variables, a re-render is triggered everytime they change and `filterFruits` is re-called, ensuring the shown fruits are always up-to date with the the filters.
 
