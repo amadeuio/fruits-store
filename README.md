@@ -5,6 +5,18 @@
 
 Powerful and lightweight fruits e-commerce store.
 
+## Demo
+
+<p align="center">
+  <img src="public/screenshots/screenshot1.png" width="650px" alt="screenshot">
+</p>
+<p align="center">
+  <img src="public/screenshots/screenshot2.png" width="650px" alt="screenshot">
+</p>
+<h2 align="center">
+  <a href="https://amadeuio.github.io/fruits-store">👉 Demo</a>
+</h2>
+
 ## Features
 
 - Home, Store, Fruit, and Bag pages
