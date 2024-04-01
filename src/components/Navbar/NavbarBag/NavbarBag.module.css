@@ -1,9 +1,8 @@
 .bagContainer {
   cursor: pointer;
-  position: relative;
 }
 
-.bagIcon {
+.bag {
   height: 30px;
   width: 30px;
 }
@@ -11,10 +10,17 @@
 .number {
   pointer-events: none;
   font-weight: 700;
+  font-size: 9px;
+}
+
+.bagContainer {
+  position: relative;
+}
+
+.number {
   position: absolute;
   top: 14.5px;
   left: 12.5px;
-  font-size: 9px;
 }
 
 .navbarBag .bagTooltip {

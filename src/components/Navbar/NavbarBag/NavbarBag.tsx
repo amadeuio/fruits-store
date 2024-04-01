@@ -25,10 +25,11 @@ const NavbarBag = () => {
     <div className={styles.navbarBag}>
       <Link to="/bag">
         <div data-tooltip-id="bag-tooltip" className={styles.bagContainer} onClick={handleBagClick}>
-          <BagIcon className={styles.bagIcon} isFilled={isBagOpen} />
+          <BagIcon className={styles.bag} isFilled={isBagOpen} />
           <div className={styles.number}>{fruitsInBag.length}</div>
         </div>
       </Link>
+
       {!isBagOpen && (
         <Tooltip
           id="bag-tooltip"
