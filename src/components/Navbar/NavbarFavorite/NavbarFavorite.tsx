@@ -17,7 +17,7 @@ const NavbarFavorite = () => {
     <Link to="/store">
       <div className={styles.navbarFavorite}>
         <FavoriteIcon
-          className={`${styles.favorite} ${favorite ? styles.clicked : ""}`}
+          className={styles.favorite}
           isFilled={favorite}
           onClick={handleFavoriteClick}
         />

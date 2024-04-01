@@ -2,11 +2,6 @@
   cursor: pointer;
   height: 30px;
   width: 30px;
-  transition: transform 0.2s ease;
-}
-
-.favorite.clicked {
-  fill: black;
 }
 
 .number {
