@@ -20,6 +20,7 @@ Powerful and lightweight fruits e-commerce store.
 ## Features
 
 - Home, Store, Fruit, and Bag pages
+- Home page carousel
 - Fruit Filtering
 - Add to Bag or Favorites
 - Bag Preview on hover
@@ -82,7 +83,7 @@ The app uses the following state data, shared througout the whole app using Cont
 
 #### 1. `Fruit` Object
 
-Represents each fruit in the store. All fruit objects are stored in a `fruits` array. Example:
+Represents each fruit in the store. All fruit objects are stored in a n`fruits` array. Example:
 
 ```javascript
 {
@@ -125,7 +126,7 @@ Represents all the filters and their active or inactive state. Example:
 }
 ```
 
-The app is constantly reading, rendering and updating this data according to user interactions, ensuring the app reflects the state correctly at all times.
+The app is constantly reading, rendering and updating this data according to user interactions, ensuring the it reflects the state correctly at all times.
 
 #### How does the filtering functionality work?
 
