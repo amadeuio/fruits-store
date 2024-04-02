@@ -20,11 +20,10 @@ Powerful and lightweight fruits e-commerce store.
 ## Features
 
 - Home, Store, Fruit, and Bag pages
-- Home page carousel
 - Fruit Filtering
 - Add to Bag or Favorites
 - Bag Preview on hover
-- Minimalistic design, smooth animations and speed
+- Minimalistic design, smooth animations and performance
 - Design inspired by Nike and Apple
 - Responsive
 
@@ -83,7 +82,7 @@ The app uses the following state data, shared througout the whole app using Cont
 
 #### 1. `Fruit` Object
 
-Represents each fruit in the store. All fruit objects are stored in a n`fruits` array. Example:
+Represents each fruit in the store. All fruit objects are stored in a `fruits` array. Example:
 
 ```javascript
 {
