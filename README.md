@@ -19,7 +19,7 @@ Fruits e-commerce store frontend.
 
 ## Features
 
-**Joyful UI**
+**Friendly UI**
 
 - Simple and intuitive UI
 - Smooth animations and feedback
@@ -93,7 +93,7 @@ Located in the root:
 
 The app uses the following state data. It's shared throughout the whole app using Context API.
 
-#### 1. Fruits Array (in [`fruits.ts`](/src/data/fruits.ts))
+#### 1. Fruits Array (initialized in [`fruits.ts`](/src/data/fruits.ts))
 
 Represents all the fruits in the store, contains fruit objects. Example:
 
@@ -114,7 +114,7 @@ Represents all the fruits in the store, contains fruit objects. Example:
 
 ```
 
-#### 2. Filters Object (in [`filters.ts`](/src/data/filters.ts))
+#### 2. Filters Object (initialized in [`filters.ts`](/src/data/filters.ts))
 
 Represents all the filters and their active or inactive state. Example:
 
