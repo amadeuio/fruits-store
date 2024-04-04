@@ -153,25 +153,25 @@ Because `fruits` and `filters` are state variables, a re-render is triggered eve
 Clone the project
 
 ```bash
-  git clone https://github.com/amadeuio/fruits-store
+git clone https://github.com/amadeuio/fruits-store
 ```
 
 Go to the project directory
 
 ```bash
-  cd fruits-store
+cd fruits-store
 ```
 
 Install dependencies
 
 ```bash
-  npm install
+npm install
 ```
 
 Start the server
 
 ```bash
-  npm run dev
+npm run dev
 ```
 
 ## Acknowledgements
