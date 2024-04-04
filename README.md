@@ -3,7 +3,7 @@
 
 # Fruits Store
 
-Powerful and lightweight fruits e-commerce store.
+Fruits e-commerce store frontend.
 
 ## Demo
 
@@ -19,30 +19,45 @@ Powerful and lightweight fruits e-commerce store.
 
 ## Features
 
-- Home, Store, Fruit, and Bag pages
-- Fruit Filtering
-- Add to Bag or Favorites
-- Bag Preview on hover
-- Minimalistic design, smooth animations and performance
-- Design inspired by Nike and Apple
+**Joyful UI**
+
+- Simple and intuitive UI
+- Smooth animations and feedback
+- Performant: mainly animates opacity and transform, minimizing browser repaints
 - Responsive
+- Minimalistic design, inspired by Nike and Apple
+- Fruit emojis are awesome
+
+**Store Features**
+
+- Filter fruits by categories (see [Fruit Filtering](#fruit-filtering))
+- Add fruits to bag or favorites
+- Hover on bag for a preview of its contents
+
+**Pages**
+
+- Home, Store, Bag and Product pages
+- Home page has a carousel previewing featured items
+
+**Customization**
+
+- Products and filters in the store are data-based, allowing for customization with minimal code changes
 
 ## Fruit Filtering
 
-Filters help you narrow down the displayed fruits.
+Filters are used to narrow down the fruits on screen.
 
-- Filter fruits by colors, family, vitamins, favorites or a search query
+- Filter the fruits by colors, family, vitamins, favorites or a search query
 - Multiple filters can be combined
 - Results update in real-time
 
 #### Search Query
 
-- Useful to search a fruit by it's name using text
+- Use it to search a fruit using text, it works with name, colors, family or vitamins
 - Case, spaces and symbols insensitive
-- Aditionally, the search also works with colors, family or vitamins, but you may use the dedicated checkboxes for that
 - Try these examples:
   - Searching `um` yields Cucumber, Pumpkin
-  - Searching `b6` yields Banana, Pineapple, Cocounut (i.e fruits with Vitamin B6)
+  - Searching `b6` yields Banana, Pineapple, Cocounut (i.e. fruits with Vitamin B6)
   - Searching `pepper` and selecting the `Red` checkbox yields Hot Pepper (example of filters combined)
 
 ## Tech Stack
@@ -53,38 +68,36 @@ Filters help you narrow down the displayed fruits.
 - **Dependencies:**
   - react-burger-menu: Expandable burger menu for mobile
   - react-flip-toolkit: Transition effect when fruits re-arrange
-  - react-router-dom: Page routing
+  - react-router-dom: Routing
   - react-slick: Home page carousel
   - react-tooltip: Bag tooltip
   - uuid: Unique ID's
-  - css-modules: Modular CSS
 
 ## Main Directories
 
 Located in `src`:
 
-- `components`: React components and it's stylesheet modules
-- `data`: Storage of data and it's type definitions
+- `components`: React components and its CSS modules
+- `data`: Storage of initial data and its type definitions
 - `utils`: Utility functions used multiple times throughout the app
 - `css`: Global CSS styles
-- `Context.tsx`: Context API provider component, used to share the data throughout the app
+- `Context.tsx`: Context API provider component
 - `Router.tsx`: React router provider component
 - `main.tsx`: Entry point for the React app
 
-Located the root:
+Located in the root:
 
-- `docs`: Distribution files generated during the build, GitHub pages is reading the root of this directory
-- `public`: Images and font
+- `public`: Fruit emoji images and app screenshots
 
 ## Data & Functionality
 
-The app uses the following state data, shared througout the whole app using Context API.
+The app uses the following state data. It's shared throughout the whole app using Context API.
 
-#### 1. `Fruit` Object
+#### 1. Fruits Array (in [`fruits.ts`](/src/data/fruits.ts))
 
-Represents each fruit in the store. All fruit objects are stored in a `fruits` array. Example:
+Represents all the fruits in the store, contains fruit objects. Example:
 
-```javascript
+```js
 {
   id: uuidv4(),
   name: "Blueberries",
@@ -96,14 +109,16 @@ Represents each fruit in the store. All fruit objects are stored in a `fruits` a
   vitamins: ["Vitamin C", "Vitamin K"],
   isFavorite: false,
   inBag: true,
-}
+},
+// etc...
+
 ```
 
-#### 2. `Filters` Object:
+#### 2. Filters Object (in [`filters.ts`](/src/data/filters.ts))
 
 Represents all the filters and their active or inactive state. Example:
 
-```javascript
+```js
 {
   colors: [
     { name: "Purple", isChecked: false },
@@ -125,21 +140,13 @@ Represents all the filters and their active or inactive state. Example:
 }
 ```
 
-The app is constantly reading, rendering and updating this data according to user interactions, ensuring the it reflects the state correctly at all times.
-
 #### How does the filtering functionality work?
 
 The [`filterFruits`](src/utils/filterFruits.ts) function is the key to this functionality. It takes both `fruits` and `filters` and returns an array of the fruits that match the filters.
 
 The [`fruitSection`](src/components/FruitSection/FruitSection.tsx) component is rendering this array, showing only the matching fruits on screen.
 
-Because `fruits` and `filters` are state variables, a re-render is triggered everytime they change and `filterFruits` is re-called, ensuring the shown fruits are always up-to date with the the filters.
-
-## Customization
-
-Because the app is a representation of the fruit and filter data, you can customize it by simply editing that data with your own desired products and filters with relative ease and minimal code tweaks.
-
-Your own products data should be used with the same formatting in [`fruits.ts`](src/data/fruits.ts), and their correpsonding filters in [`filters.ts`](src/data/filters.ts). Feel free to contact me if you need help with this.
+Because `fruits` and `filters` are state variables, a re-render is triggered everytime they change and `filterFruits` is re-called, ensuring the shown fruits are always up-to date with the the filters. This method also promotes modularity and readability.
 
 ## Run Locally
 
@@ -173,6 +180,7 @@ Start the server
 - [Google Icons](https://fonts.google.com/icons)
 - [GPT](https://chat.openai.com)
 - [shields.io](https://shields.io)
+- [readme.so](https://readme.so)
 
 ## License
 
