@@ -14,12 +14,12 @@ Frontend based fruits e-commerce store with React.
   <img src="public/screenshots/screenshot2.png" width="650px" alt="screenshot">
 </p>
 <h2 align="center">
-  <a href="https://amadeuio.github.io/fruits-store">👉 Demo</a>
+  <a href="https://fruitsstoremarket.netlify.app/">👉 Demo</a>
 </h2>
 
 ## About
 
-The app features the standard e-commerce store features and uses fruits as example products (with fun fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, and visit the bag to simulate a mock checkout process. The app focuses on simplicity and user-friendliness.
+The app contains the standard e-commerce store features and uses fruits as example products (with fun fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, edit the bag contents, and visit it to simulate a mock checkout process. The app focuses on simplicity and user-friendliness.
 
 ## Features
 
