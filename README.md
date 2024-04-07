@@ -1,9 +1,9 @@
-![stack](https://img.shields.io/badge/Stack-React_|_TypeScript-149eca)
-![license](https://img.shields.io/badge/License-MIT-green)
+![Stack](https://img.shields.io/badge/Stack-React_|_TypeScript-149eca)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 # Fruits Store
 
-Fruits e-commerce store frontend.
+E-commerce store with fruits static web app.
 
 ## Demo
 
@@ -77,7 +77,7 @@ Filters are used to narrow down the fruits on screen.
 
 Located in `src`:
 
-- `components`: React components and its CSS modules
+- `components`: React components and their CSS modules
 - `data`: Storage of initial data and its type definitions
 - `utils`: Utility functions used multiple times throughout the app
 - `css`: Global CSS styles
@@ -88,10 +88,11 @@ Located in `src`:
 Located in the root:
 
 - `public`: Fruit emoji images and app screenshots
+- `index.html`: Entry point for the app
 
 ## Data & Functionality
 
-The app uses the following state data. It's shared throughout the whole app using Context API.
+The following state data is used to manage the state of the store. It's shared throughout the whole app using Context API.
 
 #### 1. Fruits Array (initialized in [`fruits.ts`](/src/data/fruits.ts))
 
