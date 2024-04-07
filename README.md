@@ -3,7 +3,7 @@
 
 # Fruits Store
 
-E-commerce store with fruits static web app.
+Frontend based fruits e-commerce store with React.
 
 ## Demo
 
@@ -17,38 +17,29 @@ E-commerce store with fruits static web app.
   <a href="https://amadeuio.github.io/fruits-store">👉 Demo</a>
 </h2>
 
+## About
+
+The app features the standard e-commerce store features and uses fruits as example products (with fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, and visit the bag to simulate a mock checkout process. The app focuses on simplicity and user-friendliness.
+
 ## Features
 
-**Friendly UI**
-
-- Simple and intuitive UI
-- Smooth animations and feedback
-- Performant: mainly animates opacity and transform, minimizing browser repaints
-- Responsive
-- Minimalistic design, inspired by Nike and Apple
-- Fruit emojis are awesome
-
-**Store Features**
-
-- Filter fruits by categories (see [Fruit Filtering](#fruit-filtering))
-- Add fruits to bag or favorites
-- Hover on bag for a preview of its contents
-
-**Pages**
-
 - Home, Store, Bag and Product pages
-- Home page has a carousel previewing featured items
-
-**Customization**
-
+- Filter fruits by categories or search (see [Fruit Filtering](#fruit-filtering))
+- Add to bag or favorites
+- Hover on bag for a preview of its contents
+- Feedback, minimalistic design and smooth animations
+- Performant: mainly animates opacity and transform, minimizing browser repaints
+- Home page carousel previewing featured items
+- Responsive
 - Products and filters in the store are data-based, allowing for customization with minimal code changes
 
 ## Fruit Filtering
 
-Filters are used to narrow down the fruits on screen.
+Filters narrow down the displayed fruits.
 
 - Filter the fruits by colors, family, vitamins, favorites or a search query
 - Multiple filters can be combined
+- Active filter tags
 - Results update in real-time
 
 #### Search Query
@@ -177,6 +168,7 @@ npm run dev
 
 ## Acknowledgements
 
+- Design inspo: Nike and Apple
 - [Apple Fruit Emojis](https://emojipedia.org/apple)
 - [Google Icons](https://fonts.google.com/icons)
 - [GPT](https://chat.openai.com)
