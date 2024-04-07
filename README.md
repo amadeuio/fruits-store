@@ -19,7 +19,7 @@ Frontend based fruits e-commerce store with React.
 
 ## About
 
-The app features the standard e-commerce store features and uses fruits as example products (with fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, and visit the bag to simulate a mock checkout process. The app focuses on simplicity and user-friendliness.
+The app features the standard e-commerce store features and uses fruits as example products (with fun fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, and visit the bag to simulate a mock checkout process. The app focuses on simplicity and user-friendliness.
 
 ## Features
 
@@ -69,7 +69,7 @@ Filters narrow down the displayed fruits.
 Located in `src`:
 
 - `components`: React components and their CSS modules
-- `data`: Storage of initial data and its type definitions
+- `data`: Storage of initial fruit and filter data and its type definitions
 - `utils`: Utility functions used multiple times throughout the app
 - `css`: Global CSS styles
 - `Context.tsx`: Context API provider component
@@ -83,7 +83,7 @@ Located in the root:
 
 ## Data & Functionality
 
-The following state data is used to manage the state of the store. It's shared throughout the whole app using Context API.
+The following state data is used to manage the fruits and filters of the store. It's shared throughout the whole app using Context API.
 
 #### 1. Fruits Array (initialized in [`fruits.ts`](/src/data/fruits.ts))
 
