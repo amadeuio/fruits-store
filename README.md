@@ -19,7 +19,7 @@ Frontend based fruits e-commerce store with React.
 
 ## About
 
-The app contains the standard e-commerce store features and uses fruits as example products (with fun fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, edit the bag contents, and visit it to simulate a mock checkout process. The app focuses on simplicity and user-friendliness.
+The app contains the standard e-commerce store features and uses fruits as example products (with fun fruit emojis). Users can easily browse, search, view detailed product info, add products to bag or favorites, edit the bag contents, and visit the bag to simulate a mock checkout process. The app focuses on simplicity and user-friendliness. The demo comes with some fruits in bag and favorites for demonstration purposes, play around with it and change it as desired!
 
 ## Features
 
@@ -56,6 +56,7 @@ Filters narrow down the displayed fruits.
 - **UI Library:** React
 - **Languages:** TypeScript, CSS, HTML
 - **Build Tool:** Vite
+- **Deployment:** Netlify
 - **Dependencies:**
   - react-burger-menu: Expandable burger menu for mobile
   - react-flip-toolkit: Transition effect when fruits re-arrange
@@ -78,7 +79,7 @@ Located in `src`:
 
 Located in the root:
 
-- `public`: Fruit emoji images and app screenshots
+- `public`: Fruit emoji images, \_redirects file (for Netlify) and app screenshots
 - `index.html`: Entry point for the app
 
 ## Data & Functionality
