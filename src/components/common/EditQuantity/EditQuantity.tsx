@@ -1,10 +1,10 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import styles from "./EditQuantity.module.css";
 import MinusIcon from "../../../icons/MinusIcon";
 import PlusIcon from "../../../icons/PlusIcon";
 
 const EditQuantity = ({ fruit }) => {
-  const { setFruits } = useAppContext();
+  const { setFruits } = useStoreContext();
   const { quantity, id } = fruit;
 
   const handleMinusClick = () => {

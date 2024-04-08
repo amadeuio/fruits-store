@@ -1,4 +1,4 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -27,7 +27,7 @@ const CarouselFruit = ({ fruit }: CarouselFruitProps) => {
 };
 
 const HomeCarousel = () => {
-  const { fruits } = useAppContext();
+  const { fruits } = useStoreContext();
 
   const carouselFruitNames = ["Cherries", "Avocado", "Tangerine", "Melon", "Grapes"];
   const carouselFruits = carouselFruitNames.map((name) =>

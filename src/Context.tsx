@@ -15,31 +15,31 @@ import { Filters } from "./data/types";
 type SetFruits = Dispatch<SetStateAction<Fruits>>;
 type SetFilters = Dispatch<SetStateAction<Filters>>;
 
-interface FruitsContext {
+interface StoreContext {
   fruits: Fruits;
   setFruits: SetFruits;
   filters: Filters;
   setFilters: SetFilters;
 }
 
-interface AppContextProviderProps {
+interface StoreContextProviderProps {
   children: ReactNode;
 }
 
-const FruitsContext = createContext<FruitsContext | undefined>(undefined);
+const StoreContext = createContext<StoreContext | undefined>(undefined);
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const useAppContext = () => {
-  return useContext(FruitsContext);
+export const useStoreContext = () => {
+  return useContext(StoreContext);
 };
 
-export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) => {
+export const StoreContextProvider: FC<StoreContextProviderProps> = ({ children }) => {
   const [fruits, setFruits] = useState<Fruits>(initialFruits);
   const [filters, setFilters] = useState<Filters>(initialFilters);
 
   return (
-    <FruitsContext.Provider value={{ fruits, setFruits, filters, setFilters }}>
+    <StoreContext.Provider value={{ fruits, setFruits, filters, setFilters }}>
       {children}
-    </FruitsContext.Provider>
+    </StoreContext.Provider>
   );
 };

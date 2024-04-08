@@ -1,4 +1,4 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import { Link } from "react-router-dom";
 import styles from "./BagFruit.module.css";
 import getImageSrc from "../../../utils/getImageSrc";
@@ -7,7 +7,7 @@ import EditQuantity from "../../common/EditQuantity/EditQuantity";
 import DeleteIcon from "../../../icons/DeleteIcon";
 
 const BagFruit = ({ fruit }) => {
-  const { setFruits } = useAppContext();
+  const { setFruits } = useStoreContext();
   const { id, name, slug, family, price, quantity } = fruit;
 
   const handleDelete = () => {

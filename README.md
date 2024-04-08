@@ -79,7 +79,7 @@ Located in `src`:
 
 Located in the root:
 
-- `public`: Fruit emoji images, \_redirects file (for Netlify) and app screenshots
+- `public`: Fruit emoji images, `_redirects` file (for Netlify) and app screenshots
 - `index.html`: Entry point for the app
 
 ## Data & Functionality

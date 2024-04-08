@@ -1,4 +1,4 @@
-import { useAppContext } from "../../Context";
+import { useStoreContext } from "../../Context";
 import { useNavigate } from "react-router-dom";
 import styles from "./Bag.module.css";
 import showCheckoutMessage from "../../utils/showCheckoutMessage";
@@ -8,7 +8,7 @@ import ButtonBack from "../common/ButtonBack/ButtonBack";
 
 const Bag = () => {
   const navigate = useNavigate();
-  const { fruits } = useAppContext();
+  const { fruits } = useStoreContext();
 
   const fruitsInBag = fruits.filter((fruit) => fruit.inBag);
   const subtotalPrice: string = fruitsInBag

@@ -1,4 +1,4 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import { Link } from "react-router-dom";
 import { Flipped } from "react-flip-toolkit";
 import styles from "./FruitItem.module.css";
@@ -12,7 +12,7 @@ interface FruitItemProps {
 }
 
 const FruitItem = ({ fruit }: FruitItemProps) => {
-  const { setFruits } = useAppContext();
+  const { setFruits } = useStoreContext();
   const { id, name, slug, price, family, isFavorite, inBag } = fruit;
 
   const handleFavoriteClick = (e) => {

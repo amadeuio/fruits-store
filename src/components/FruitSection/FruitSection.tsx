@@ -1,4 +1,4 @@
-import { useAppContext } from "../../Context";
+import { useStoreContext } from "../../Context";
 import { Flipper } from "react-flip-toolkit";
 import styles from "./FruitSection.module.css";
 import filterFruits from "../../utils/filterFruits";
@@ -6,7 +6,7 @@ import FruitItem from "./FruitItem/FruitItem";
 import ActiveFilters from "./ActiveFilters/ActiveFilters";
 
 const FruitSection = () => {
-  const { fruits, filters } = useAppContext();
+  const { fruits, filters } = useStoreContext();
   const filteredFruits = filterFruits(fruits, filters);
 
   return (

@@ -1,4 +1,4 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import styles from "./FruitView.module.css";
@@ -13,9 +13,9 @@ import FavoriteIcon from "../../../icons/FavoriteIcon";
 
 const FruitView = () => {
   const navigate = useNavigate();
-  const { fruits, setFruits } = useAppContext();
+  const { fruits, setFruits } = useStoreContext();
   const { slug } = useParams<{ slug: string }>();
-  
+
   const fruit = fruits.find((fruit) => fruit.slug === slug);
   const { id, name, price, quantity, family, colors, vitamins, isFavorite, inBag } = fruit;
   const description = fruitDescriptions[name];

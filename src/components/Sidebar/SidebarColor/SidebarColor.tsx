@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import styles from "./SidebarColor.module.css";
 import CheckIcon from "../../../icons/CheckIcon";
 import ExpandIcon from "../../../icons/ExpandIcon";
 
 const SidebarColor = () => {
   const [isExpanded, setIsExpanded] = useState(true);
-  const { filters, setFilters } = useAppContext();
+  const { filters, setFilters } = useStoreContext();
   const { colors } = filters;
 
   const toggleNavbar = () => {

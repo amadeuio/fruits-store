@@ -1,10 +1,10 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import styles from "./ActiveFilters.module.css";
 import getCheckedFilters from "../../../utils/getCheckedFilters";
 import CloseIcon from "../../../icons/CloseIcon";
 
 const ActiveFilters = () => {
-  const { filters, setFilters } = useAppContext();
+  const { filters, setFilters } = useStoreContext();
   const { colors, families, vitamins, query } = filters;
 
   const handleCloseClick = (filterName) => {

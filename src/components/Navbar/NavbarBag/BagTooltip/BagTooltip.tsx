@@ -1,4 +1,4 @@
-import { useAppContext } from "../../../../Context";
+import { useStoreContext } from "../../../../Context";
 import { Link } from "react-router-dom";
 import styles from "./BagTooltip.module.css";
 import getImageSrc from "../../../../utils/getImageSrc";
@@ -13,7 +13,7 @@ interface BagTooltipProps {
 }
 
 const BagTooltip = ({ fruitsInBag }: BagTooltipProps) => {
-  const { setFruits } = useAppContext();
+  const { setFruits } = useStoreContext();
 
   const handleCheckoutClick = () => {
     showCheckoutMessage(fruitsInBag);

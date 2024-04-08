@@ -1,9 +1,9 @@
-import { useAppContext } from "../../../Context";
+import { useStoreContext } from "../../../Context";
 import { Link } from "react-router-dom";
 import styles from "./NavbarLinks.module.css";
 
 const NavbarLinks = () => {
-  const { filters, setFilters } = useAppContext();
+  const { filters, setFilters } = useStoreContext();
 
   const handleStoreClick = () => {
     const updatedFilters = { ...filters, favorite: false };
