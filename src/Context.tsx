@@ -26,7 +26,7 @@ interface StoreContextProviderProps {
   children: ReactNode;
 }
 
-const StoreContext = createContext<StoreContext | undefined>(undefined);
+const StoreContext = createContext<StoreContext | null>(null);
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const useStoreContext = () => {
