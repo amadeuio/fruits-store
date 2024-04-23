@@ -24,6 +24,7 @@
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: var(--color-400);
+  background: none;
 }
 
 ::-webkit-scrollbar-thumb:hover {

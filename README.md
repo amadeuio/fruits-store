@@ -14,7 +14,7 @@ Frontend based fruits e-commerce store with React.
   <img src="public/screenshots/screenshot2.png" width="650px" alt="screenshot">
 </p>
 <h2 align="center">
-  <a href="https://fruitsstoremarket.netlify.app/">👉 Demo</a>
+  <a href="https://fruitsstoremarket.netlify.app">👉 Demo</a>
 </h2>
 
 ## About
@@ -79,7 +79,7 @@ Located in `src`:
 
 Located in the root:
 
-- `public`: Fruit emoji images, `_redirects` file (for Netlify) and app screenshots
+- `public`: Fruit emoji images, `_redirects` file (for Netlify with React Router) and app screenshots
 - `index.html`: Entry point for the app
 
 ## Data & Functionality
