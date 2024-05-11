@@ -3,7 +3,7 @@
 
 # Fruits Store
 
-Frontend based fruits e-commerce store with React.
+Static e-commerce store with React.
 
 ## Demo
 
